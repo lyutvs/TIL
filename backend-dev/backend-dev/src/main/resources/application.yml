@@ -1,0 +1,24 @@
+server:
+    port: 8081
+    servlet:
+        context-path: /PenguinStats
+spring:
+    profiles:
+        active: validator
+    data:
+        mongodb:
+            uri: mongodb://username:password@localhost:27017/penguin_stats
+    cache:
+        type: redis
+    redis:
+        host: <redis_host>
+        port: <redis_port>
+        password: <redis_password>
+        database: <redis_database>
+executor:
+    size:
+        core: 10
+        max: 20
+        queue: 8
+    keepalive:
+        time: 60
