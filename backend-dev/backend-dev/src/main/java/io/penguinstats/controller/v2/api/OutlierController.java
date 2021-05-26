@@ -63,7 +63,7 @@ public class OutlierController {
     @ApiOperation(value = "Submit an outlier")
     @PostMapping
     public ResponseEntity<PostOutlierResponse> postOutlier(@Valid @RequestBody String postOutlierRequest,
-            HttpServletRequest request, HttpServletResponse response) throws Exception {
+                                                           HttpServletRequest request, HttpServletResponse response) throws Exception {
         if (!JSONUtil.isValidJSON(postOutlierRequest)) {
             throw new BusinessException(ErrorCode.INVALID_PARAMETER, "Invalid metadata.");
         }
@@ -105,10 +105,10 @@ public class OutlierController {
     @ApiOperation(value = "Handle callback from UpYun. Save path and time for the screenshot uploaded.")
     @PostMapping(path = "/callback")
     public ResponseEntity<String> handleUpYunCallback(@RequestParam(name = "id") String _id,
-            @RequestParam(name = "code") Integer code, @RequestParam(name = "message") String message,
-            @RequestParam(name = "url") String url, @RequestParam(name = "time") Long time,
-            @RequestHeader("content-md5") String md5, @RequestHeader("authorization") String authorization,
-            HttpServletRequest request) throws Exception {
+                                                      @RequestParam(name = "code") Integer code, @RequestParam(name = "message") String message,
+                                                      @RequestParam(name = "url") String url, @RequestParam(name = "time") Long time,
+                                                      @RequestHeader("content-md5") String md5, @RequestHeader("authorization") String authorization,
+                                                      HttpServletRequest request) throws Exception {
         if (StringUtils.isAnyEmpty(_id, message, url, md5, authorization) || time == null || code == null) {
             log.error("Missing parameters or headers in UpYun callback.");
             throw new BusinessException(ErrorCode.INVALID_PARAMETER,

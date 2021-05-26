@@ -20,10 +20,10 @@ import lombok.NoArgsConstructor;
 @ApiModel(description = "The response model for matrix query.")
 public class MatrixQueryResponse implements Serializable, BasicQueryResponse {
 
-	private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
-	@ApiModelProperty(notes = "All elements in the result matrix")
-	@JsonProperty("matrix")
-	private List<DropMatrixElement> elements;
+    @ApiModelProperty(notes = "All elements in the result matrix")
+    @JsonProperty("matrix")
+    private List<DropMatrixElement> elements;
 
 }

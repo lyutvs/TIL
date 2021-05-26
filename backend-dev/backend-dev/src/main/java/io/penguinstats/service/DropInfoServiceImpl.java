@@ -54,11 +54,11 @@ public class DropInfoServiceImpl implements DropInfoService {
         return dropInfoDao.findDropInfosByServerAndTimeRangeID(server, timeRangeID);
     }
 
-    /** 
-     * @Title: getLatestDropInfosMapByServer 
-     * @Description: Get lists of the latest drop info in every stage. Key is stageId.
+    /**
      * @param server
-     * @return Map<String, List<DropInfo>>
+     * @return Map<String, List < DropInfo>>
+     * @Title: getLatestDropInfosMapByServer
+     * @Description: Get lists of the latest drop info in every stage. Key is stageId.
      */
     @Override
     public Map<String, List<DropInfo>> getLatestDropInfosMapByServer(Server server) {
@@ -80,12 +80,12 @@ public class DropInfoServiceImpl implements DropInfoService {
         return infosByStageId;
     }
 
-    /** 
-     * @Title: getDropSetMap 
-     * @Description: Get all dropsets in a map, key is stageId
+    /**
      * @param server
      * @param time
-     * @return Map<String,Set<String>>
+     * @return Map<String, Set < String>>
+     * @Title: getDropSetMap
+     * @Description: Get all dropsets in a map, key is stageId
      */
     @Override
     public Map<String, Set<String>> getDropSetMap(Server server, Long time) {
@@ -101,13 +101,13 @@ public class DropInfoServiceImpl implements DropInfoService {
         return result;
     }
 
-    /** 
-     * @Title: getDropSet 
-     * @Description: Get all dropped itemIds in a set, under given server, stage and time
+    /**
      * @param server
      * @param stageId
      * @param time
      * @return Set<String>
+     * @Title: getDropSet
+     * @Description: Get all dropped itemIds in a set, under given server, stage and time
      */
     @Override
     public Set<String> getDropSet(Server server, String stageId, Long time) {
@@ -115,16 +115,16 @@ public class DropInfoServiceImpl implements DropInfoService {
         return dropsetMap.get(stageId);
     }
 
-    /** 
-     * @Title: getOpeningDropInfosMap 
-     * @Description: Get lists of dropInfos whose stage are opening under the given time and server. key is stageId
+    /**
      * @param server
      * @param time
-     * @return Map<String,List<DropInfo>>
+     * @return Map<String, List < DropInfo>>
+     * @Title: getOpeningDropInfosMap
+     * @Description: Get lists of dropInfos whose stage are opening under the given time and server. key is stageId
      */
     @Override
     public Map<String, List<DropInfo>> getOpeningDropInfosMap(Server server, Long time,
-            boolean excludeRecognitionOnly) {
+                                                              boolean excludeRecognitionOnly) {
         Map<String, TimeRange> timeRangeMap = timeRangeService.getTimeRangeMap();
         List<DropInfo> infos = getSpringProxy().getDropInfosByServer(server);
 
@@ -137,12 +137,12 @@ public class DropInfoServiceImpl implements DropInfoService {
         return result;
     }
 
-    /** 
-     * @Title: getOpeningStages 
-     * @Description: Get a list of stageIds which are opening under the given time and server
+    /**
      * @param server
      * @param time
      * @return Set<String>
+     * @Title: getOpeningStages
+     * @Description: Get a list of stageIds which are opening under the given time and server
      */
     @Override
     public Set<String> getOpeningStages(Server server, Long time) {
@@ -163,10 +163,10 @@ public class DropInfoServiceImpl implements DropInfoService {
         return stageIds;
     }
 
-    /** 
-     * @Title: getSpringProxy 
-     * @Description: Use proxy to hit cache 
+    /**
      * @return DropInfoService
+     * @Title: getSpringProxy
+     * @Description: Use proxy to hit cache
      */
     private DropInfoService getSpringProxy() {
         return applicationContext.getBean(DropInfoService.class);

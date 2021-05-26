@@ -18,12 +18,12 @@ import lombok.NoArgsConstructor;
 @ApiModel(description = "The trend detail model of a specific item in one stage.")
 public class TrendDetail implements Serializable {
 
-	private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
-	@ApiModelProperty(notes = "The number of times you played in the stage.")
-	private List<Integer> times;
+    @ApiModelProperty(notes = "The number of times you played in the stage.")
+    private List<Integer> times;
 
-	@ApiModelProperty(notes = "Quantity of the dropped item.")
-	private List<Integer> quantity;
+    @ApiModelProperty(notes = "Quantity of the dropped item.")
+    private List<Integer> quantity;
 
 }

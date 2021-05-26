@@ -16,14 +16,14 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 @EnableCaching
 public class PenguinStatisticsApplication extends SpringBootServletInitializer {
 
-	@Override
-	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-		return application.sources(PenguinStatisticsApplication.class);
-	}
+    @Override
+    protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+        return application.sources(PenguinStatisticsApplication.class);
+    }
 
-	public static void main(String[] args) {
-		SpringApplication.run(PenguinStatisticsApplication.class, args);
-		System.out.println("PenguinStats is running.");
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(PenguinStatisticsApplication.class, args);
+        System.out.println("PenguinStats is running.");
+    }
 
 }

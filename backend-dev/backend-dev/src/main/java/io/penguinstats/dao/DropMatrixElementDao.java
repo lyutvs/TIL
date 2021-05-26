@@ -19,7 +19,7 @@ public interface DropMatrixElementDao extends MongoRepository<DropMatrixElement,
 
     @DeleteQuery("{'$and' : [{'type' : ?0}, {'isPast' : ?1}, {'server' : ?2}, {'stageId' : ?3}]}")
     Long deleteAllByIsPastAndServerAndStageId(DropMatrixElementType type, Boolean isPast, Server server,
-            String stageId);
+                                              String stageId);
 
     @Query("{'$and' : [{'type' : ?0}, {'isPast' : ?1}, {'server' : ?2}]}")
     List<DropMatrixElement> queryByTypeAndIsPastAndServer(DropMatrixElementType type, Boolean isPast, Server server);

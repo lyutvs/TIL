@@ -11,8 +11,8 @@ import io.penguinstats.model.PatternMatrixElement;
 @Repository
 public interface PatternMatrixElementDao extends MongoRepository<PatternMatrixElement, String> {
 
-	Long deleteByServer(Server server);
+    Long deleteByServer(Server server);
 
-	List<PatternMatrixElement> findByServer(Server server);
+    List<PatternMatrixElement> findByServer(Server server);
 
 }

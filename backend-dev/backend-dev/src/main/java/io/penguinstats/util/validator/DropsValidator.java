@@ -75,7 +75,7 @@ public class DropsValidator extends BaseValidator {
             for (DropInfo dropInfo : dropInfos) {
                 final int numberToCheck = dropInfo.getItemId() == null ? typesNum
                         : Optional.ofNullable(typedDropMapByItemId.get(dropInfo.getItemId()))
-                                .map(TypedDrop::getQuantity).orElse(0);
+                        .map(TypedDrop::getQuantity).orElse(0);
                 boolean judge = Optional.ofNullable(dropInfo.getBounds()).map(bounds -> bounds.isValid(numberToCheck))
                         .orElse(true);
                 if (!judge) {

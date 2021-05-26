@@ -22,13 +22,13 @@ import io.swagger.annotations.ApiOperation;
 @Deprecated
 public class ReportController {
 
-	@ApiOperation(value = "Save single report", hidden = true)
-	@PostMapping
-	public ResponseEntity<String> saveSingleReport(@RequestBody String requestBody, HttpServletRequest request,
-			HttpServletResponse response) {
-		HttpHeaders headers = new HttpHeaders();
-		headers.add(CustomHeader.X_PENGUIN_UPGRAGE, Constant.API_V2);
-		return new ResponseEntity<>(headers, HttpStatus.GONE);
-	}
+    @ApiOperation(value = "Save single report", hidden = true)
+    @PostMapping
+    public ResponseEntity<String> saveSingleReport(@RequestBody String requestBody, HttpServletRequest request,
+                                                   HttpServletResponse response) {
+        HttpHeaders headers = new HttpHeaders();
+        headers.add(CustomHeader.X_PENGUIN_UPGRAGE, Constant.API_V2);
+        return new ResponseEntity<>(headers, HttpStatus.GONE);
+    }
 
 }

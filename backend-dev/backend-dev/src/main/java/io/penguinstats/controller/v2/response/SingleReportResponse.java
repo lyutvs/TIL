@@ -15,7 +15,7 @@ import lombok.NoArgsConstructor;
 @ApiModel(description = "The response model for single drop submit.")
 public class SingleReportResponse {
 
-	@ApiModelProperty(notes = "The hash of the last submitted drop record. It can be used in recall.")
-	private String reportHash;
+    @ApiModelProperty(notes = "The hash of the last submitted drop record. It can be used in recall.")
+    private String reportHash;
 
 }

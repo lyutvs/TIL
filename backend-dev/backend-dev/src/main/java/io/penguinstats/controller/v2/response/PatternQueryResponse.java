@@ -20,10 +20,10 @@ import lombok.NoArgsConstructor;
 @ApiModel(description = "The response model for pattern query.")
 public class PatternQueryResponse implements Serializable, BasicQueryResponse {
 
-	private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
-	@ApiModelProperty(notes = "All elements in the pattern matrix")
-	@JsonProperty("pattern_matrix")
-	private List<PatternMatrixElement> elements;
+    @ApiModelProperty(notes = "All elements in the pattern matrix")
+    @JsonProperty("pattern_matrix")
+    private List<PatternMatrixElement> elements;
 
 }

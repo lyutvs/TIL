@@ -8,6 +8,6 @@ import io.penguinstats.model.SystemProperty;
 @Repository
 public interface SystemPropertyDao extends MongoRepository<SystemProperty, String> {
 
-	SystemProperty findByKey(String key);
+    SystemProperty findByKey(String key);
 
 }

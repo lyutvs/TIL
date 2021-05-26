@@ -24,6 +24,6 @@ public class Average {
         System.out.println(min / num);
     }
 
-    }
+}
 
 

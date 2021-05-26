@@ -15,19 +15,19 @@ import io.penguinstats.util.LastUpdateTimeUtil;
 @Service("eventPeriodService")
 public class EventPeriodServiceImpl implements EventPeriodService {
 
-	@Autowired
-	private EventPeriodDao eventPeriodDao;
+    @Autowired
+    private EventPeriodDao eventPeriodDao;
 
-	@Override
-	public void saveEventPeriod(EventPeriod eventPeriod) {
-		eventPeriodDao.save(eventPeriod);
-	}
+    @Override
+    public void saveEventPeriod(EventPeriod eventPeriod) {
+        eventPeriodDao.save(eventPeriod);
+    }
 
-	@Override
-	public List<EventPeriod> getAllSortedEventPeriod() {
-		List<EventPeriod> result = eventPeriodDao.findAll(new Sort(Direction.ASC, "start"));
-		LastUpdateTimeUtil.setCurrentTimestamp(LastUpdateMapKeyName.EVENT_PERIOD_LIST);
-		return result;
-	}
+    @Override
+    public List<EventPeriod> getAllSortedEventPeriod() {
+        List<EventPeriod> result = eventPeriodDao.findAll(new Sort(Direction.ASC, "start"));
+        LastUpdateTimeUtil.setCurrentTimestamp(LastUpdateMapKeyName.EVENT_PERIOD_LIST);
+        return result;
+    }
 
 }

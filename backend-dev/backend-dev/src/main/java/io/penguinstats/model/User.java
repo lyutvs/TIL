@@ -24,26 +24,26 @@ import lombok.NoArgsConstructor;
 @ApiModel(description = "The model of a user.")
 public class User implements Serializable {
 
-	private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
-	@Id
-	@JsonIgnore
-	private ObjectId id;
-	@Indexed
-	private String userID;
-	private Double weight;
-	private List<String> tags;
-	private List<String> ips;
-	private String comment;
-	private Long createTime;
-	private Integer totalUpload = 0;
-	private Integer reliableUpload = 0;
+    @Id
+    @JsonIgnore
+    private ObjectId id;
+    @Indexed
+    private String userID;
+    private Double weight;
+    private List<String> tags;
+    private List<String> ips;
+    private String comment;
+    private Long createTime;
+    private Integer totalUpload = 0;
+    private Integer reliableUpload = 0;
 
-	@JsonIgnore
-	public boolean containsIp(String ip) {
-		if (this.ips == null)
-			return false;
-		return ips.contains(ip);
-	}
+    @JsonIgnore
+    public boolean containsIp(String ip) {
+        if (this.ips == null)
+            return false;
+        return ips.contains(ip);
+    }
 
 }

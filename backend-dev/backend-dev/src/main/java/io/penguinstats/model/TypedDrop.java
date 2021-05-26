@@ -15,13 +15,13 @@ import lombok.Setter;
 @ApiModel(description = "The model for a dropped item together with the quantity and drop type.")
 public class TypedDrop extends Drop {
 
-	private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
-	private DropType dropType;
+    private DropType dropType;
 
-	public TypedDrop(String itemId, Integer quantity, DropType dropType) {
-		super(itemId, quantity);
-		this.dropType = dropType;
-	}
+    public TypedDrop(String itemId, Integer quantity, DropType dropType) {
+        super(itemId, quantity);
+        this.dropType = dropType;
+    }
 
 }

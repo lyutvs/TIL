@@ -17,11 +17,11 @@ import lombok.NoArgsConstructor;
 @ApiModel(description = "The response model for a stage with its playing times.")
 public class StageTimes implements Serializable {
 
-	private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
-	private String stageId;
+    private String stageId;
 
-	@ApiModelProperty(notes = "The number of times this stage has been played")
-	private Integer times;
+    @ApiModelProperty(notes = "The number of times this stage has been played")
+    private Integer times;
 
 }

@@ -16,16 +16,16 @@ import lombok.NoArgsConstructor;
 @ApiModel(description = "The model of an item with its quantity limitation.")
 public class ItemQuantityBounds implements Serializable {
 
-	private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
-	private String itemId;
-	private Bounds bounds;
+    private String itemId;
+    private Bounds bounds;
 
-	@Override
-	public String toString() {
-		StringBuilder sb = new StringBuilder();
-		sb.append(this.itemId).append(" [").append(this.bounds.toString()).append("]");
-		return sb.toString();
-	}
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(this.itemId).append(" [").append(this.bounds.toString()).append("]");
+        return sb.toString();
+    }
 
 }

@@ -19,22 +19,22 @@ import io.swagger.annotations.ApiOperation;
 @Deprecated
 public class LimitationController {
 
-	@ApiOperation("Get all real limitations")
-	@GetMapping(produces = "application/json;charset=UTF-8")
-	public ResponseEntity<String> getAllExtendedLimitations() {
-		HttpHeaders headers = new HttpHeaders();
-		headers.add(CustomHeader.X_PENGUIN_UPGRAGE, Constant.API_V2);
-		return new ResponseEntity<>("Penguin Stats api v1 is not supported any more. Please use v2 instead, thanks.",
-				headers, HttpStatus.NOT_FOUND);
-	}
+    @ApiOperation("Get all real limitations")
+    @GetMapping(produces = "application/json;charset=UTF-8")
+    public ResponseEntity<String> getAllExtendedLimitations() {
+        HttpHeaders headers = new HttpHeaders();
+        headers.add(CustomHeader.X_PENGUIN_UPGRAGE, Constant.API_V2);
+        return new ResponseEntity<>("Penguin Stats api v1 is not supported any more. Please use v2 instead, thanks.",
+                headers, HttpStatus.NOT_FOUND);
+    }
 
-	@ApiOperation("Get limitation by stageId")
-	@GetMapping(path = "/{stageId}", produces = "application/json;charset=UTF-8")
-	public ResponseEntity<String> getExtendedLimitation(@PathVariable("stageId") String stageId) {
-		HttpHeaders headers = new HttpHeaders();
-		headers.add(CustomHeader.X_PENGUIN_UPGRAGE, Constant.API_V2);
-		return new ResponseEntity<>("Penguin Stats api v1 is not supported any more. Please use v2 instead, thanks.",
-				headers, HttpStatus.NOT_FOUND);
-	}
+    @ApiOperation("Get limitation by stageId")
+    @GetMapping(path = "/{stageId}", produces = "application/json;charset=UTF-8")
+    public ResponseEntity<String> getExtendedLimitation(@PathVariable("stageId") String stageId) {
+        HttpHeaders headers = new HttpHeaders();
+        headers.add(CustomHeader.X_PENGUIN_UPGRAGE, Constant.API_V2);
+        return new ResponseEntity<>("Penguin Stats api v1 is not supported any more. Please use v2 instead, thanks.",
+                headers, HttpStatus.NOT_FOUND);
+    }
 
 }

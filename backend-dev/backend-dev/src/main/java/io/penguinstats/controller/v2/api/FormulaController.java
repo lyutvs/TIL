@@ -33,7 +33,7 @@ public class FormulaController {
         }
 
         try (FileReader fileReader = new FileReader(sourceFile);
-                BufferedReader reader = new BufferedReader(fileReader)) {
+             BufferedReader reader = new BufferedReader(fileReader)) {
 
             StringBuilder builder = new StringBuilder();
             String currentLine = reader.readLine();

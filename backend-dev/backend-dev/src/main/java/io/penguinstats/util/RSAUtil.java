@@ -68,7 +68,7 @@ public class RSAUtil {
      * <p>
      * 生成密钥对(公钥和私钥)
      * </p>
-     * 
+     *
      * @return
      * @throws Exception
      */
@@ -76,8 +76,8 @@ public class RSAUtil {
         KeyPairGenerator keyPairGen = KeyPairGenerator.getInstance(KEY_ALGORITHM);
         keyPairGen.initialize(INITIALIZE_LENGTH);
         KeyPair keyPair = keyPairGen.generateKeyPair();
-        RSAPublicKey publicKey = (RSAPublicKey)keyPair.getPublic();
-        RSAPrivateKey privateKey = (RSAPrivateKey)keyPair.getPrivate();
+        RSAPublicKey publicKey = (RSAPublicKey) keyPair.getPublic();
+        RSAPrivateKey privateKey = (RSAPrivateKey) keyPair.getPrivate();
         Map<String, Object> keyMap = new HashMap<String, Object>(2);
         keyMap.put(PUBLIC_KEY, publicKey);
         keyMap.put(PRIVATE_KEY, privateKey);
@@ -88,12 +88,9 @@ public class RSAUtil {
      * <p>
      * 用私钥对信息生成数字签名
      * </p>
-     * 
-     * @param data
-     *            已加密数据
-     * @param privateKey
-     *            私钥(BASE64编码)
-     * 
+     *
+     * @param data       已加密数据
+     * @param privateKey 私钥(BASE64编码)
      * @return
      * @throws Exception
      */
@@ -112,17 +109,12 @@ public class RSAUtil {
      * <p>
      * 校验数字签名
      * </p>
-     * 
-     * @param data
-     *            已加密数据
-     * @param publicKey
-     *            公钥(BASE64编码)
-     * @param sign
-     *            数字签名
-     * 
+     *
+     * @param data      已加密数据
+     * @param publicKey 公钥(BASE64编码)
+     * @param sign      数字签名
      * @return
      * @throws Exception
-     * 
      */
     public static boolean verify(byte[] data, String publicKey, String sign) throws Exception {
         byte[] keyBytes = Base64.decodeBase64(publicKey);
@@ -139,11 +131,9 @@ public class RSAUtil {
      * <P>
      * 私钥解密
      * </p>
-     * 
-     * @param encryptedData
-     *            已加密数据
-     * @param privateKey
-     *            私钥(BASE64编码)
+     *
+     * @param encryptedData 已加密数据
+     * @param privateKey    私钥(BASE64编码)
      * @return
      * @throws Exception
      */
@@ -179,11 +169,9 @@ public class RSAUtil {
      * <p>
      * 公钥解密
      * </p>
-     * 
-     * @param encryptedData
-     *            已加密数据
-     * @param publicKey
-     *            公钥(BASE64编码)
+     *
+     * @param encryptedData 已加密数据
+     * @param publicKey     公钥(BASE64编码)
      * @return
      * @throws Exception
      */
@@ -219,11 +207,9 @@ public class RSAUtil {
      * <p>
      * 公钥加密
      * </p>
-     * 
-     * @param data
-     *            源数据
-     * @param publicKey
-     *            公钥(BASE64编码)
+     *
+     * @param data      源数据
+     * @param publicKey 公钥(BASE64编码)
      * @return
      * @throws Exception
      */
@@ -260,11 +246,9 @@ public class RSAUtil {
      * <p>
      * 私钥加密
      * </p>
-     * 
-     * @param data
-     *            源数据
-     * @param privateKey
-     *            私钥(BASE64编码)
+     *
+     * @param data       源数据
+     * @param privateKey 私钥(BASE64编码)
      * @return
      * @throws Exception
      */
@@ -300,14 +284,13 @@ public class RSAUtil {
      * <p>
      * 获取私钥
      * </p>
-     * 
-     * @param keyMap
-     *            密钥对
+     *
+     * @param keyMap 密钥对
      * @return
      * @throws Exception
      */
     public static String getPrivateKey(Map<String, Object> keyMap) throws Exception {
-        Key key = (Key)keyMap.get(PRIVATE_KEY);
+        Key key = (Key) keyMap.get(PRIVATE_KEY);
         return Base64.encodeBase64String(key.getEncoded());
     }
 
@@ -315,14 +298,13 @@ public class RSAUtil {
      * <p>
      * 获取公钥
      * </p>
-     * 
-     * @param keyMap
-     *            密钥对
+     *
+     * @param keyMap 密钥对
      * @return
      * @throws Exception
      */
     public static String getPublicKey(Map<String, Object> keyMap) throws Exception {
-        Key key = (Key)keyMap.get(PUBLIC_KEY);
+        Key key = (Key) keyMap.get(PUBLIC_KEY);
         return Base64.encodeBase64String(key.getEncoded());
     }
 

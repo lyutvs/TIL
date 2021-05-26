@@ -7,8 +7,8 @@ import lombok.Getter;
 @AllArgsConstructor
 public enum DropMatrixElementType {
 
-	REGULAR("reular"), TREND("trend");
+    REGULAR("reular"), TREND("trend");
 
-	private String name;
+    private String name;
 
 }

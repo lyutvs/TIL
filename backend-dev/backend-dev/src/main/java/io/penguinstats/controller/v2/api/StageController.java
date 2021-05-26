@@ -43,9 +43,9 @@ public class StageController {
             notes = "Get all Stages in the DB, together with their current drop infos (if applicable).")
     @GetMapping(produces = "application/json;charset=UTF-8")
     public ResponseEntity<List<Stage>>
-            getAllStages(@ApiParam(value = "Indicate which server you want to query. Default is CN.",
-                    required = false) @RequestParam(name = "server", required = false,
-                            defaultValue = "CN") Server server) {
+    getAllStages(@ApiParam(value = "Indicate which server you want to query. Default is CN.",
+            required = false) @RequestParam(name = "server", required = false,
+            defaultValue = "CN") Server server) {
         List<Stage> stages = stageService.getAllStages();
         Map<String, List<DropInfo>> dropInfosMap =
                 dropInfoService.getOpeningDropInfosMap(server, System.currentTimeMillis(), false);
@@ -80,10 +80,10 @@ public class StageController {
     @ApiOperation(value = "Get Stage by StageId")
     @GetMapping(path = "/{stageId}", produces = "application/json;charset=UTF-8")
     public ResponseEntity<Stage>
-            getStageByStageId(@ApiParam(value = "Indicate which server you want to query. Default is CN.",
-                    required = false) @RequestParam(name = "server", required = false,
-                            defaultValue = "CN") Server server,
-                    @PathVariable("stageId") String stageId) {
+    getStageByStageId(@ApiParam(value = "Indicate which server you want to query. Default is CN.",
+            required = false) @RequestParam(name = "server", required = false,
+            defaultValue = "CN") Server server,
+                      @PathVariable("stageId") String stageId) {
         Stage stage = stageService.getStageByStageId(stageId);
         Map<String, List<DropInfo>> dropInfosMap =
                 dropInfoService.getOpeningDropInfosMap(server, System.currentTimeMillis(), false);

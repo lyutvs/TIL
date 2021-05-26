@@ -157,8 +157,8 @@ public class ReportController {
     @ApiOperation(value = "Submit a batch drop report from screenshot recognition")
     @PostMapping(path = "/recognition")
     public ResponseEntity<RecognitionReportResponse> saveBatchRecognitionReport(@RequestBody String requestBody,
-            @RequestHeader("x-penguin-variant") String variant, HttpServletRequest request,
-            HttpServletResponse response) throws Exception {
+                                                                                @RequestHeader("x-penguin-variant") String variant, HttpServletRequest request,
+                                                                                HttpServletResponse response) throws Exception {
         DecryptStrategy decryptStrategy = null;
         if ("1".equals(variant)) {
             decryptStrategy =
@@ -214,7 +214,7 @@ public class ReportController {
     }
 
     private RecognitionReportRequest getRecognitionReportRequestFromRequestBody(String requestBody,
-            DecryptStrategy decryptStrategy) {
+                                                                                DecryptStrategy decryptStrategy) {
         String dataJSONStr = null;
         boolean doneDecryption = false;
         if (JSONUtil.isValidJSON(requestBody)) {
@@ -239,7 +239,7 @@ public class ReportController {
     }
 
     private void batchSaveDropsFromRecognitionReportRequest(RecognitionReportRequest recognitionReportRequest,
-            String ipAddr, String userID, List<RecognitionReportError> errors) {
+                                                            String ipAddr, String userID, List<RecognitionReportError> errors) {
         String source = recognitionReportRequest.getSource();
         String version = recognitionReportRequest.getVersion();
         Server server = recognitionReportRequest.getServer();

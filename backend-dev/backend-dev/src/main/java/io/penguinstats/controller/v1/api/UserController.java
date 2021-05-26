@@ -36,7 +36,7 @@ public class UserController {
     @ApiOperation("Login")
     @PostMapping(produces = "text/plain;charset=UTF-8")
     public ResponseEntity<String> login(@RequestBody String userID, HttpServletRequest request,
-            HttpServletResponse response) throws Exception {
+                                        HttpServletResponse response) throws Exception {
         boolean isInternal = false;
         if (userID.startsWith(INTERNAL_USER_ID_PREFIX)) {
             isInternal = true;

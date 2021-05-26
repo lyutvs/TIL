@@ -5,5 +5,5 @@ const h1 = {
 
 };
 
-console.log(typeof(hi));
+console.log(typeof (hi));
 console.log(h1);

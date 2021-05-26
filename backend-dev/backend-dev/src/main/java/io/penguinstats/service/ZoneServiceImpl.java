@@ -19,53 +19,53 @@ import io.penguinstats.util.exception.BusinessException;
 @Service("zoneService")
 public class ZoneServiceImpl implements ZoneService {
 
-	@Autowired
-	private ZoneDao zoneDao;
-	@Autowired
-	private StageService stageService;
+    @Autowired
+    private ZoneDao zoneDao;
+    @Autowired
+    private StageService stageService;
 
-	@Override
-	public void saveZone(Zone zone) {
-		zoneDao.save(zone);
-	}
+    @Override
+    public void saveZone(Zone zone) {
+        zoneDao.save(zone);
+    }
 
-	@Override
-	public Zone getZoneByZoneId(String zoneId) {
-		return zoneDao.findByZoneId(zoneId).orElseThrow(() -> new BusinessException(ErrorCode.NOT_FOUND,
-				"Zone[" + zoneId + "] is not found", Optional.of(zoneId)));
-	}
+    @Override
+    public Zone getZoneByZoneId(String zoneId) {
+        return zoneDao.findByZoneId(zoneId).orElseThrow(() -> new BusinessException(ErrorCode.NOT_FOUND,
+                "Zone[" + zoneId + "] is not found", Optional.of(zoneId)));
+    }
 
-	@Override
-	public Zone getZoneByStageId(String stageId) {
-		Stage stage = stageService.getStageByStageId(stageId);
-		if (stage == null)
-			return null;
-		return getZoneByZoneId(stage.getZoneId());
-	}
+    @Override
+    public Zone getZoneByStageId(String stageId) {
+        Stage stage = stageService.getStageByStageId(stageId);
+        if (stage == null)
+            return null;
+        return getZoneByZoneId(stage.getZoneId());
+    }
 
-	/**
-	 * @Title: getAllZones
-	 * @Description: Return all zones in the database as a list.
-	 * @return List<Zone>
-	 */
-	@Override
-	public List<Zone> getAllZones() {
-		List<Zone> zones = zoneDao.findAll();
-		LastUpdateTimeUtil.setCurrentTimestamp(LastUpdateMapKeyName.ZONE_LIST);
-		return zones;
-	}
+    /**
+     * @return List<Zone>
+     * @Title: getAllZones
+     * @Description: Return all zones in the database as a list.
+     */
+    @Override
+    public List<Zone> getAllZones() {
+        List<Zone> zones = zoneDao.findAll();
+        LastUpdateTimeUtil.setCurrentTimestamp(LastUpdateMapKeyName.ZONE_LIST);
+        return zones;
+    }
 
-	/**
-	 * @Title: getZoneMap
-	 * @Description: Return a map which has zoneId as key and zone object as value.
-	 * @return Map<String,Zone>
-	 */
-	@Override
-	public Map<String, Zone> getZoneMap() {
-		List<Zone> list = getAllZones();
-		Map<String, Zone> map = new HashMap<>();
-		list.forEach(zone -> map.put(zone.getZoneId(), zone));
-		return map;
-	}
+    /**
+     * @return Map<String, Zone>
+     * @Title: getZoneMap
+     * @Description: Return a map which has zoneId as key and zone object as value.
+     */
+    @Override
+    public Map<String, Zone> getZoneMap() {
+        List<Zone> list = getAllZones();
+        Map<String, Zone> map = new HashMap<>();
+        list.forEach(zone -> map.put(zone.getZoneId(), zone));
+        return map;
+    }
 
 }

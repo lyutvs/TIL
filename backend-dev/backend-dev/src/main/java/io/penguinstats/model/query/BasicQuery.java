@@ -6,6 +6,6 @@ import io.penguinstats.model.MatrixElement;
 
 public interface BasicQuery {
 
-	List<? extends MatrixElement> execute() throws Exception;
+    List<? extends MatrixElement> execute() throws Exception;
 
 }

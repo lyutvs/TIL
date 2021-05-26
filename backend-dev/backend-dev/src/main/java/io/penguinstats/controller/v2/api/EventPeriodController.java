@@ -25,19 +25,19 @@ import io.swagger.annotations.ApiOperation;
 @Api(tags = {"Period"})
 public class EventPeriodController {
 
-	@Autowired
-	private EventPeriodService eventPeriodService;
+    @Autowired
+    private EventPeriodService eventPeriodService;
 
-	@ApiOperation("Get all event periods sorted with starting time by ascending order")
-	@GetMapping(produces = "application/json;charset=UTF-8")
-	@ResponseStatus(HttpStatus.OK)
-	public ResponseEntity<List<EventPeriod>> getAllSortedEventPeriod() {
-		List<EventPeriod> periods = eventPeriodService.getAllSortedEventPeriod();
-		HttpHeaders headers = new HttpHeaders();
-		String lastModified = DateUtil
-				.formatDate(new Date(LastUpdateTimeUtil.getLastUpdateTime(LastUpdateMapKeyName.EVENT_PERIOD_LIST)));
-		headers.add(HttpHeaders.LAST_MODIFIED, lastModified);
-		return new ResponseEntity<List<EventPeriod>>(periods, headers, HttpStatus.OK);
-	}
+    @ApiOperation("Get all event periods sorted with starting time by ascending order")
+    @GetMapping(produces = "application/json;charset=UTF-8")
+    @ResponseStatus(HttpStatus.OK)
+    public ResponseEntity<List<EventPeriod>> getAllSortedEventPeriod() {
+        List<EventPeriod> periods = eventPeriodService.getAllSortedEventPeriod();
+        HttpHeaders headers = new HttpHeaders();
+        String lastModified = DateUtil
+                .formatDate(new Date(LastUpdateTimeUtil.getLastUpdateTime(LastUpdateMapKeyName.EVENT_PERIOD_LIST)));
+        headers.add(HttpHeaders.LAST_MODIFIED, lastModified);
+        return new ResponseEntity<List<EventPeriod>>(periods, headers, HttpStatus.OK);
+    }
 
 }

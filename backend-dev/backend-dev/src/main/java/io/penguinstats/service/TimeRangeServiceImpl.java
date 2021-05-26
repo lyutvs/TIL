@@ -45,9 +45,9 @@ public class TimeRangeServiceImpl implements TimeRangeService {
     }
 
     /**
+     * @return List<TimeRange>
      * @Title: getAllTimeRanges
      * @Description: Return all time ranges in the database as a list.
-     * @return List<TimeRange>
      */
     @Override
     public List<TimeRange> getAllTimeRanges() {
@@ -56,9 +56,9 @@ public class TimeRangeServiceImpl implements TimeRangeService {
     }
 
     /**
+     * @return Map<String, TimeRange>
      * @Title: getTimeRangeMap
      * @Description: Return a map which has rangeID as key and time range object as value.
-     * @return Map<String,TimeRange>
      */
     @Override
     public Map<String, TimeRange> getTimeRangeMap() {
@@ -69,22 +69,23 @@ public class TimeRangeServiceImpl implements TimeRangeService {
     }
 
     // TOOD: fix comments
-    /** 
-     * @Title: getLatestMaxAccumulatableTimeRangesMapByServer 
-     * @Description: Latest max accumulatable time ranges map, key is stageId.
-     *               For example we have 5 time ranges for a stage:
-     *               Range I, Time 0~8, droplist: A, B
-     *               Range II, Time 10~15, droplist: A, B, C
-     *               Range III, Time 15~20, droplist: A, B
-     *               Range IV, Time 20~25, droplist: A, B, D
-     *               Range V, Time 30~present, droplist: A, B
-     *               C is a new material, we think it may affect others' drop rates.
-     *               D is AP supplement item, we think it is independent from others.
-     *               Thus, data from Range I should not be calculated into the global matrix.
-     *               D does not affect drop rates, so data from Range IV can be combined with II, III and V.
-     *               So the longest, and accumulatable time ranges are: II, III, IV and V.
+
+    /**
      * @param server
-     * @return Map<String, Map<String, List<String>>>
+     * @return Map<String, Map < String, List < String>>>
+     * @Title: getLatestMaxAccumulatableTimeRangesMapByServer
+     * @Description: Latest max accumulatable time ranges map, key is stageId.
+     * For example we have 5 time ranges for a stage:
+     * Range I, Time 0~8, droplist: A, B
+     * Range II, Time 10~15, droplist: A, B, C
+     * Range III, Time 15~20, droplist: A, B
+     * Range IV, Time 20~25, droplist: A, B, D
+     * Range V, Time 30~present, droplist: A, B
+     * C is a new material, we think it may affect others' drop rates.
+     * D is AP supplement item, we think it is independent from others.
+     * Thus, data from Range I should not be calculated into the global matrix.
+     * D does not affect drop rates, so data from Range IV can be combined with II, III and V.
+     * So the longest, and accumulatable time ranges are: II, III, IV and V.
      */
     @Override
     public Map<String, Map<String, List<String>>> getLatestMaxAccumulatableTimeRangesMapByServer(Server server) {
@@ -174,11 +175,11 @@ public class TimeRangeServiceImpl implements TimeRangeService {
                 .collect(Collectors.toList());
     }
 
-    /** 
-     * @Title: getPassedTimeRanges 
-     * @Description: Return all time ranges whose end time is between (currentTime - time) and currentTime
+    /**
      * @param time Time unit is millisecond
      * @return List<TimeRange>
+     * @Title: getPassedTimeRanges
+     * @Description: Return all time ranges whose end time is between (currentTime - time) and currentTime
      */
     @Override
     public List<TimeRange> getPassedTimeRanges(long time) {
@@ -189,10 +190,10 @@ public class TimeRangeServiceImpl implements TimeRangeService {
                 .collect(Collectors.toList());
     }
 
-    /** 
-     * @Title: getSpringProxy 
-     * @Description: Use proxy to hit cache 
+    /**
      * @return TimeRangeService
+     * @Title: getSpringProxy
+     * @Description: Use proxy to hit cache
      */
     private TimeRangeService getSpringProxy() {
         return applicationContext.getBean(TimeRangeService.class);

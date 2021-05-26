@@ -16,9 +16,9 @@ import lombok.NoArgsConstructor;
 @ApiModel(description = "The model for a dropped item together with the quantity.")
 public class Drop implements Serializable {
 
-	private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
-	private String itemId;
-	private Integer quantity;
+    private String itemId;
+    private Integer quantity;
 
 }

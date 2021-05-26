@@ -4,22 +4,22 @@ import java.io.IOException;
 import java.net.Socket;
 
 public class MySocketClient {
-	
-	public static void main(String[] args) {
-		try {
-			Socket socket = null;
-			socket = new Socket("ÁÂÃø¿¡´Â_¼­¹öÀÇ_IP¸¦, ¿ìÃø¿¡´Â_Æ÷Æ®¹øÈ£¸¦_¾²¼¼¿ä", 1234); // ¼ÒÄÏ ¼­¹ö¿¡ Á¢¼Ó 
-			System.out.println("¼­¹ö¿¡ Á¢¼Ó ¼º°ø!"); // Á¢¼Ó È®ÀÎ¿ë
-			
-			ListeningThread t1 = new ListeningThread(socket); // ¼­¹ö¿¡¼­ º¸³½ ¸Þ¼¼Áö ÀÐ´Â Thread
-			WritingThread t2 = new WritingThread(socket); // ¼­¹ö·Î ¸Þ¼¼Áö º¸³»´Â Thread
 
-			t1.start(); // ListeningThread Start
-			t2.start(); // WritingThread Start
-            
-		} catch (IOException e) {
-			e.printStackTrace(); // ¿¹¿ÜÃ³¸®
-		}
-	}
+    public static void main(String[] args) {
+        try {
+            Socket socket = null;
+            socket = new Socket("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½_ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½_IPï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½_ï¿½ï¿½Æ®ï¿½ï¿½È£ï¿½ï¿½_ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½", 1234); // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+            System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½!"); // ï¿½ï¿½ï¿½ï¿½ È®ï¿½Î¿ï¿½
+
+            ListeningThread t1 = new ListeningThread(socket); // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Þ¼ï¿½ï¿½ï¿½ ï¿½Ð´ï¿½ Thread
+            WritingThread t2 = new WritingThread(socket); // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Þ¼ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Thread
+
+            t1.start(); // ListeningThread Start
+            t2.start(); // WritingThread Start
+
+        } catch (IOException e) {
+            e.printStackTrace(); // ï¿½ï¿½ï¿½ï¿½Ã³ï¿½ï¿½
+        }
+    }
 }
 

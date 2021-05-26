@@ -25,17 +25,17 @@ import lombok.NoArgsConstructor;
 @ApiModel(description = "The model of a notice.")
 public class Notice implements Serializable {
 
-	private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
-	@Id
-	@JsonIgnore
-	private ObjectId id;
-	private Integer severity;
-	@JsonProperty("content_i18n")
-	private Map<String, String> contentMap;
-	private Map<Server, Existence> existence;
+    @Id
+    @JsonIgnore
+    private ObjectId id;
+    private Integer severity;
+    @JsonProperty("content_i18n")
+    private Map<String, String> contentMap;
+    private Map<Server, Existence> existence;
 
-	// will be removed
-	private ExistConditions conditions;
+    // will be removed
+    private ExistConditions conditions;
 
 }

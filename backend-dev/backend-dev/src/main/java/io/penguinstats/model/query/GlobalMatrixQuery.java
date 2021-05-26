@@ -20,27 +20,27 @@ import lombok.experimental.Accessors;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class GlobalMatrixQuery implements Serializable, BasicQuery {
 
-	private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
-	public GlobalMatrixQuery(DropMatrixElementService dropMatrixElementService) {
-		this.dropMatrixElementService = dropMatrixElementService;
-	}
+    public GlobalMatrixQuery(DropMatrixElementService dropMatrixElementService) {
+        this.dropMatrixElementService = dropMatrixElementService;
+    }
 
-	@JsonIgnore
-	private DropMatrixElementService dropMatrixElementService;
+    @JsonIgnore
+    private DropMatrixElementService dropMatrixElementService;
 
-	private Server server;
+    private Server server;
 
-	private String userID;
+    private String userID;
 
-	private Integer timeout;
+    private Integer timeout;
 
-	private Boolean isPast;
+    private Boolean isPast;
 
-	@Override
-	public List<? extends MatrixElement> execute() throws Exception {
-		return QueryUtil.runQuery(
-				() -> dropMatrixElementService.generateGlobalDropMatrixElements(server, userID, isPast), timeout);
-	}
+    @Override
+    public List<? extends MatrixElement> execute() throws Exception {
+        return QueryUtil.runQuery(
+                () -> dropMatrixElementService.generateGlobalDropMatrixElements(server, userID, isPast), timeout);
+    }
 
 }

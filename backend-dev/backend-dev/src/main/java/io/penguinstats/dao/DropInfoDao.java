@@ -12,12 +12,12 @@ import io.penguinstats.model.DropInfo;
 @Repository
 public interface DropInfoDao extends MongoRepository<DropInfo, String> {
 
-	List<DropInfo> findDropInfosByServer(Server server);
+    List<DropInfo> findDropInfosByServer(Server server);
 
-	@Query("{'$and' : [{'server' : ?0}, {'stageId' : ?1}]}")
-	List<DropInfo> findDropInfosByServerAndStageId(Server server, String stageId);
+    @Query("{'$and' : [{'server' : ?0}, {'stageId' : ?1}]}")
+    List<DropInfo> findDropInfosByServerAndStageId(Server server, String stageId);
 
-	@Query("{'$and' : [{'server' : ?0}, {'timeRangeID' : ?1}]}")
-	List<DropInfo> findDropInfosByServerAndTimeRangeID(Server server, String timeRangeID);
+    @Query("{'$and' : [{'server' : ?0}, {'timeRangeID' : ?1}]}")
+    List<DropInfo> findDropInfosByServerAndTimeRangeID(Server server, String timeRangeID);
 
 }

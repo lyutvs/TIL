@@ -28,33 +28,33 @@ import lombok.NoArgsConstructor;
 @ApiModel(description = "The model of an item.")
 public class Item implements Serializable {
 
-	private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
-	@Id
-	@JsonIgnore
-	private ObjectId id;
-	@Indexed
-	private String itemId;
-	private String name;
-	@JsonProperty("name_i18n")
-	private Map<String, String> nameMap;
-	private Integer sortId;
-	private Integer rarity;
-	@ApiModelProperty(notes = "The existence of the item in each server.")
-	private Map<Server, Existence> existence;
-	private String itemType;
-	private Integer addTimePoint;
-	@ApiModelProperty(notes = "The position in the sprite image.")
-	private List<Integer> spriteCoord;
-	private String groupID;
-	@JsonProperty("alias")
-	private Map<String, List<String>> aliasMap;
-	@JsonProperty("pron")
-	private Map<String, List<String>> pronMap;
+    @Id
+    @JsonIgnore
+    private ObjectId id;
+    @Indexed
+    private String itemId;
+    private String name;
+    @JsonProperty("name_i18n")
+    private Map<String, String> nameMap;
+    private Integer sortId;
+    private Integer rarity;
+    @ApiModelProperty(notes = "The existence of the item in each server.")
+    private Map<Server, Existence> existence;
+    private String itemType;
+    private Integer addTimePoint;
+    @ApiModelProperty(notes = "The position in the sprite image.")
+    private List<Integer> spriteCoord;
+    private String groupID;
+    @JsonProperty("alias")
+    private Map<String, List<String>> aliasMap;
+    @JsonProperty("pron")
+    private Map<String, List<String>> pronMap;
 
-	@JsonIgnore
-	public Item toNonI18nView() {
-		this.nameMap = null;
-		return this;
-	}
+    @JsonIgnore
+    public Item toNonI18nView() {
+        this.nameMap = null;
+        return this;
+    }
 }

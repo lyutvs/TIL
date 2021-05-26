@@ -1,7 +1,7 @@
 const obj = {
     name: 'sehyoun',
     major: 'cs',
-    getName: function() {
+    getName: function () {
         console.log(this.name);
     }
 }

@@ -22,50 +22,50 @@ import lombok.NoArgsConstructor;
 @ApiModel(description = "The model for report quantity interval.")
 public class Bounds implements Serializable {
 
-	private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
-	@ApiModelProperty(notes = "Left end of the interval. Inclusive.")
-	private Integer lower;
+    @ApiModelProperty(notes = "Left end of the interval. Inclusive.")
+    private Integer lower;
 
-	@ApiModelProperty(notes = "Right end of the interval. Exclusive.")
-	private Integer upper;
+    @ApiModelProperty(notes = "Right end of the interval. Exclusive.")
+    private Integer upper;
 
-	@ApiModelProperty(notes = "Numbers that are not allowed in the interval.")
-	private List<Integer> exceptions;
+    @ApiModelProperty(notes = "Numbers that are not allowed in the interval.")
+    private List<Integer> exceptions;
 
-	public Bounds(Integer lower, Integer upper) {
-		this.lower = lower;
-		this.upper = upper;
-		this.exceptions = null;
-	}
+    public Bounds(Integer lower, Integer upper) {
+        this.lower = lower;
+        this.upper = upper;
+        this.exceptions = null;
+    }
 
-	@JsonIgnore
-	public boolean isValid(int num) {
-		if (this.lower != null && num < this.lower)
-			return false;
-		if (this.upper != null && num > this.upper)
-			return false;
-		if (this.exceptions != null) {
-			for (Integer ex : this.exceptions) {
-				if (num == ex)
-					return false;
-			}
-		}
-		return true;
-	}
+    @JsonIgnore
+    public boolean isValid(int num) {
+        if (this.lower != null && num < this.lower)
+            return false;
+        if (this.upper != null && num > this.upper)
+            return false;
+        if (this.exceptions != null) {
+            for (Integer ex : this.exceptions) {
+                if (num == ex)
+                    return false;
+            }
+        }
+        return true;
+    }
 
-	@JsonIgnore
-	public Bounds simpleCombine(Bounds b) {
-		Set<Integer> newExceptionsSet = new HashSet<>();
-		if (this.exceptions != null)
-			newExceptionsSet.addAll(this.exceptions);
-		if (b.getExceptions() != null)
-			newExceptionsSet.addAll(b.getExceptions());
-		if (newExceptionsSet.isEmpty())
-			newExceptionsSet = null;
-		return new Bounds(this.getLower() == null || b.getLower() == null ? null : this.getLower() + b.getLower(),
-				this.getUpper() == null || b.getUpper() == null ? null : this.getUpper() + b.getUpper(),
-				newExceptionsSet == null ? null : new ArrayList<>(newExceptionsSet));
-	}
+    @JsonIgnore
+    public Bounds simpleCombine(Bounds b) {
+        Set<Integer> newExceptionsSet = new HashSet<>();
+        if (this.exceptions != null)
+            newExceptionsSet.addAll(this.exceptions);
+        if (b.getExceptions() != null)
+            newExceptionsSet.addAll(b.getExceptions());
+        if (newExceptionsSet.isEmpty())
+            newExceptionsSet = null;
+        return new Bounds(this.getLower() == null || b.getLower() == null ? null : this.getLower() + b.getLower(),
+                this.getUpper() == null || b.getUpper() == null ? null : this.getUpper() + b.getUpper(),
+                newExceptionsSet == null ? null : new ArrayList<>(newExceptionsSet));
+    }
 
 }

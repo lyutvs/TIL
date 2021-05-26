@@ -19,21 +19,21 @@ import lombok.NoArgsConstructor;
 @ApiModel(description = "The response model for advanced query.")
 public class AdvancedQueryResponse implements Serializable, QueryResponse {
 
-	private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
-	public AdvancedQueryResponse(List<BasicQueryResponse> results) {
-		this.results = results;
-	}
+    public AdvancedQueryResponse(List<BasicQueryResponse> results) {
+        this.results = results;
+    }
 
-	public AdvancedQueryResponse(String error) {
-		this.error = error;
-	}
+    public AdvancedQueryResponse(String error) {
+        this.error = error;
+    }
 
-	@ApiModelProperty(notes = "A list containing all query results.")
-	@JsonProperty("advanced_results")
-	private List<BasicQueryResponse> results;
+    @ApiModelProperty(notes = "A list containing all query results.")
+    @JsonProperty("advanced_results")
+    private List<BasicQueryResponse> results;
 
-	@ApiModelProperty(notes = "It will show up when there is something wrong with the advanced query.")
-	private String error;
+    @ApiModelProperty(notes = "It will show up when there is something wrong with the advanced query.")
+    private String error;
 
 }

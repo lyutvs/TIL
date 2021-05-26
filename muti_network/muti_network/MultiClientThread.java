@@ -3,77 +3,77 @@ package muti_network;
 import java.awt.Font;
 import java.util.Scanner;
 
-public class MultiClientThread extends Thread{
+public class MultiClientThread extends Thread {
     private MultiClient mc;
-    
-    public MultiClientThread(MultiClient mc){
+
+    public MultiClientThread(MultiClient mc) {
         this.mc = mc;
     }
-    
-    
-    public void run(){
+
+
+    public void run() {
         String message = null;
         String[] receivedMsg = null;
-        
+
         boolean isStop = false;
-        while(!isStop){
-            try{
-                message = (String)mc.getOis().readObject();
+        while (!isStop) {
+            try {
+                message = (String) mc.getOis().readObject();
                 receivedMsg = message.split("#");
 
-            }catch(Exception e){
+            } catch (Exception e) {
                 e.printStackTrace();
                 isStop = true;
             }
-            System.out.println(receivedMsg[0]+","+receivedMsg[1]);
-            if(receivedMsg[1].equals("exit")){
-                if(receivedMsg[0].equals(mc.getId())){
+            System.out.println(receivedMsg[0] + "," + receivedMsg[1]);
+            if (receivedMsg[1].equals("exit")) {
+                if (receivedMsg[0].equals(mc.getId())) {
                     mc.exit();
-                }else{
+                } else {
                     mc.getJta().append(
-                    receivedMsg[0] +"´ÔÀÌ Á¾·á ÇÏ¼Ì½À´Ï´Ù."+
-                    System.getProperty("line.separator"));
+                            receivedMsg[0] + "ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ï¼Ì½ï¿½ï¿½Ï´ï¿½." +
+                                    System.getProperty("line.separator"));
                     mc.getJta().setCaretPosition(
-                    mc.getJta().getDocument().getLength());
+                            mc.getJta().getDocument().getLength());
                 }
-            }else if(receivedMsg[1].equals("change")){               
-                mc.changepower=true;
-                mc.getJta().append("¹Ù²Ü ¾ÆÀÌµð¸¦ ÀÔ·ÂÇÏ¼¼¿ä"+ System.getProperty("line.separator"));
+            } else if (receivedMsg[1].equals("change")) {
+                mc.changepower = true;
+                mc.getJta().append("ï¿½Ù²ï¿½ ï¿½ï¿½ï¿½Ìµï¿½ ï¿½Ô·ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½" + System.getProperty("line.separator"));
                 String name = receivedMsg[1];
                 mc.SetName(name);
-            }else if(receivedMsg[1].equals("clear")){               
-            	mc.Clear();
-            }else if(receivedMsg[0].equals(mc.getId())){
-            	mc.getJta().append(
-            			receivedMsg[0] +" : "+receivedMsg[1]+
-                        System.getProperty("line.separator"));
-                        mc.getJta().setCaretPosition(
-                            mc.getJta().getDocument().getLength());  
-            	
-            }else if(receivedMsg[1].equals("/r")) { //
-                if (receivedMsg[2].equals(mc.getId())) { 
-                    mc.getJta().append("µµÂø"+receivedMsg[0]+" : "+receivedMsg[3] + System.getProperty("line.separator"));
-                 }
+            } else if (receivedMsg[1].equals("clear")) {
+                mc.Clear();
+            } else if (receivedMsg[0].equals(mc.getId())) {
+                mc.getJta().append(
+                        receivedMsg[0] + " : " + receivedMsg[1] +
+                                System.getProperty("line.separator"));
+                mc.getJta().setCaretPosition(
+                        mc.getJta().getDocument().getLength());
+
+            } else if (receivedMsg[1].equals("/r")) { //
+                if (receivedMsg[2].equals(mc.getId())) {
+                    mc.getJta().append("ï¿½ï¿½ï¿½ï¿½" + receivedMsg[0] + " : " + receivedMsg[3] + System.getProperty("line.separator"));
+                }
                  /*if (receivedMsg[0].equals(mc.getId())) {
-                    mc.getJta().append("º¸³¿"+receivedMsg[2]+" : "+receivedMsg[3] + System.getProperty("line.separator"));
+                    mc.getJta().append("ï¿½ï¿½ï¿½ï¿½"+receivedMsg[2]+" : "+receivedMsg[3] + System.getProperty("line.separator"));
                  }*/
 
-            }else if(receivedMsg[0].equals("list")){            	
-            	int len =receivedMsg.length-1;
-            	String numStr2 = String.valueOf(len);
-            	mc.getJta().append("ÇöÀçÁ¢¼ÓÀÎ¿ø :"+numStr2+System.getProperty("line.separator"));
-            	for(int i=0;i<receivedMsg.length;i++){
-            		mc.getJta().append(receivedMsg[i]+System.getProperty("line.separator"));
-            	}       
-            }else if(receivedMsg[1].equals("Ä®Åð")){               
-                mc.getJta().append("ÀÌ ¸Þ½ÃÁö´Â ºÎÀûÀýÇÕ´Ï´Ù."+ System.getProperty("line.separator"));
-                
-            }else{               
+            } else if (receivedMsg[0].equals("list")) {
+                int len = receivedMsg.length - 1;
+                String numStr2 = String.valueOf(len);
+                mc.getJta().append("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¿ï¿½ :" + numStr2 + System.getProperty("line.separator"));
+                for (int i = 0; i < receivedMsg.length; i++) {
+                    mc.getJta().append(receivedMsg[i] + System.getProperty("line.separator"));
+                }
+            } else if (receivedMsg[1].equals("Ä®ï¿½ï¿½")) {
+                mc.getJta().append("ï¿½ï¿½ ï¿½Þ½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½." + System.getProperty("line.separator"));
+
+            } else {
                 mc.getJta().append(
-                receivedMsg[0] +" : "+receivedMsg[1]+
-                System.getProperty("line.separator"));
+                        receivedMsg[0] + " : " + receivedMsg[1] +
+                                System.getProperty("line.separator"));
                 mc.getJta().setCaretPosition(
-                    mc.getJta().getDocument().getLength());     
+                        mc.getJta().getDocument().getLength());
             }
         }
     }

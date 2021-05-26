@@ -53,11 +53,11 @@ public class CookieUtil {
         response.addHeader("Set-Cookie", sb.toString());
     }
 
-    /** 
-     * @Title: readUserIDFromCookie 
-     * @Description: Read userID from cookies.
+    /**
      * @param request
      * @return String
+     * @Title: readUserIDFromCookie
+     * @Description: Read userID from cookies.
      */
     public String readUserIDFromCookie(HttpServletRequest request) {
         Cookie[] cookies = request.getCookies();

@@ -30,7 +30,7 @@ public class RestExceptionHandler {
 
     @ExceptionHandler({BusinessException.class})
     public ResponseEntity<ErrorResponseWrapper> handleBusinessException(BusinessException ex,
-            HttpServletRequest request) {
+                                                                        HttpServletRequest request) {
         String userID = authUtil.authUserFromRequest(request);
         log.info("business exception: uid={} msg={}", userID, ex.getMessage());
 
@@ -42,16 +42,16 @@ public class RestExceptionHandler {
 
     @ExceptionHandler({BindException.class, MethodArgumentNotValidException.class})
     public final ResponseEntity<? extends ErrorResponseWrapper> handleBindException(Exception ex,
-            HttpServletRequest request) {
+                                                                                    HttpServletRequest request) {
         ErrorResponseWrapper apiResponse = new ErrorResponseWrapper(ErrorCode.INVALID_PARAMETER, ex.getMessage());
         String validationErrorStr = "";
         if (ex instanceof BindException) {
             validationErrorStr =
-                    ValidationUtil.fieldErrorToString(((BindException)ex).getBindingResult().getFieldErrors());
+                    ValidationUtil.fieldErrorToString(((BindException) ex).getBindingResult().getFieldErrors());
             apiResponse.setMessage(validationErrorStr);
         } else if (ex instanceof MethodArgumentNotValidException) {
             validationErrorStr = ValidationUtil
-                    .fieldErrorToString((((MethodArgumentNotValidException)ex).getBindingResult().getFieldErrors()));
+                    .fieldErrorToString((((MethodArgumentNotValidException) ex).getBindingResult().getFieldErrors()));
             apiResponse.setMessage(validationErrorStr);
         }
         String userID = authUtil.authUserFromRequest(request);
@@ -62,7 +62,7 @@ public class RestExceptionHandler {
 
     @ExceptionHandler({ServiceException.class})
     public ResponseEntity<ErrorResponseWrapper> handleServiceException(ServiceException ex, HttpServletRequest request,
-            HttpServletResponse response) {
+                                                                       HttpServletResponse response) {
         log.error("service exception", ex);
 
         ErrorResponseWrapper errorResponse = new ErrorResponseWrapper(
@@ -77,7 +77,7 @@ public class RestExceptionHandler {
      */
     @ExceptionHandler({Exception.class})
     public ResponseEntity<ErrorResponseWrapper> handle(Exception ex, HttpServletRequest request,
-            HttpServletResponse response) {
+                                                       HttpServletResponse response) {
         log.error("unexpected exception", ex);
 
         ErrorResponseWrapper errorResponse = new ErrorResponseWrapper(ErrorCode.UNKNOWN, SERVICE_UNAVAILABLE);

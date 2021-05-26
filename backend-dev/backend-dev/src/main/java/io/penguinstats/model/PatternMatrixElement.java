@@ -25,39 +25,39 @@ import lombok.NoArgsConstructor;
 @ApiModel(description = "The model for the element in pattern matrix.")
 public class PatternMatrixElement implements MatrixElement, Serializable {
 
-	private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
-	@Id
-	@JsonIgnore
-	private ObjectId id;
+    @Id
+    @JsonIgnore
+    private ObjectId id;
 
-	@Indexed
-	private String stageId;
+    @Indexed
+    private String stageId;
 
-	private DropPattern pattern;
+    private DropPattern pattern;
 
-	@ApiModelProperty(notes = "The number of times this pattern has dropped")
-	private Integer quantity;
+    @ApiModelProperty(notes = "The number of times this pattern has dropped")
+    private Integer quantity;
 
-	@ApiModelProperty(notes = "The number of times this stage has been played")
-	private Integer times;
+    @ApiModelProperty(notes = "The number of times this stage has been played")
+    private Integer times;
 
-	@ApiModelProperty(notes = "The left end of the interval used in the calculation")
-	private Long start;
+    @ApiModelProperty(notes = "The left end of the interval used in the calculation")
+    private Long start;
 
-	@ApiModelProperty(notes = "The right end of the interval used in the calculation")
-	private Long end;
+    @ApiModelProperty(notes = "The right end of the interval used in the calculation")
+    private Long end;
 
-	@Indexed
-	private Server server;
+    @Indexed
+    private Server server;
 
-	private Long updateTime;
+    private Long updateTime;
 
-	@JsonIgnore
-	public PatternMatrixElement toResultView() {
-		this.server = null;
-		this.updateTime = null;
-		return this;
-	}
+    @JsonIgnore
+    public PatternMatrixElement toResultView() {
+        this.server = null;
+        this.updateTime = null;
+        return this;
+    }
 
 }

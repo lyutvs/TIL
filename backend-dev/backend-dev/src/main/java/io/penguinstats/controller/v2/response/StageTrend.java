@@ -19,13 +19,13 @@ import lombok.NoArgsConstructor;
 @ApiModel(description = "The trend result model of a specific stage.")
 public class StageTrend implements Serializable {
 
-	private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
-	@ApiModelProperty(notes = "The start time of the trend result in this stage.")
-	private Long startTime;
+    @ApiModelProperty(notes = "The start time of the trend result in this stage.")
+    private Long startTime;
 
-	@ApiModelProperty(notes = "A map containing trend details. Key is itemId.")
-	@JsonProperty("results")
-	private Map<String, TrendDetail> trendDetailMap;
+    @ApiModelProperty(notes = "A map containing trend details. Key is itemId.")
+    @JsonProperty("results")
+    private Map<String, TrendDetail> trendDetailMap;
 
 }

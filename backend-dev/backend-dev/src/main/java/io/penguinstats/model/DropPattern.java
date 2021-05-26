@@ -17,8 +17,8 @@ import lombok.NoArgsConstructor;
 @ApiModel(description = "The model for the drop pattern.")
 public class DropPattern implements Serializable {
 
-	private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
-	List<Drop> drops;
+    List<Drop> drops;
 
 }

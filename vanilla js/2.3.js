@@ -1,4 +1,4 @@
-const arr = ['zero','one','two'];
+const arr = ['zero', 'one', 'two'];
 
 arr.push('three');
 console.log(arr);

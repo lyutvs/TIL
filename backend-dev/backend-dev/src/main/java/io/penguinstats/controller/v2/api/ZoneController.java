@@ -25,27 +25,27 @@ import io.swagger.annotations.ApiOperation;
 @Api(tags = {"Zone"})
 public class ZoneController {
 
-	@Autowired
-	private ZoneService zoneService;
+    @Autowired
+    private ZoneService zoneService;
 
-	@ApiOperation(value = "Get all Zones", notes = "Get all Zones in the DB.")
-	@GetMapping(produces = "application/json;charset=UTF-8")
-	public ResponseEntity<List<Zone>> getAllZones() {
-		List<Zone> zones = zoneService.getAllZones();
-		zones.forEach(zone -> zone.toNewView());
-		HttpHeaders headers = new HttpHeaders();
-		String lastModified =
-				DateUtil.formatDate(new Date(LastUpdateTimeUtil.getLastUpdateTime(LastUpdateMapKeyName.ZONE_LIST)));
-		headers.add(HttpHeaders.LAST_MODIFIED, lastModified);
-		return new ResponseEntity<List<Zone>>(zones, headers, HttpStatus.OK);
-	}
+    @ApiOperation(value = "Get all Zones", notes = "Get all Zones in the DB.")
+    @GetMapping(produces = "application/json;charset=UTF-8")
+    public ResponseEntity<List<Zone>> getAllZones() {
+        List<Zone> zones = zoneService.getAllZones();
+        zones.forEach(zone -> zone.toNewView());
+        HttpHeaders headers = new HttpHeaders();
+        String lastModified =
+                DateUtil.formatDate(new Date(LastUpdateTimeUtil.getLastUpdateTime(LastUpdateMapKeyName.ZONE_LIST)));
+        headers.add(HttpHeaders.LAST_MODIFIED, lastModified);
+        return new ResponseEntity<List<Zone>>(zones, headers, HttpStatus.OK);
+    }
 
-	@ApiOperation(value = "Get a Zone by ZoneId")
-	@GetMapping(path = "/{zoneId}", produces = "application/json;charset=UTF-8")
-	public ResponseEntity<Zone> getZoneByZoneId(@PathVariable("zoneId") String zoneId) {
-		Zone zone = zoneService.getZoneByZoneId(zoneId);
-		zone.toNewView();
-		return new ResponseEntity<Zone>(zone, HttpStatus.OK);
-	}
+    @ApiOperation(value = "Get a Zone by ZoneId")
+    @GetMapping(path = "/{zoneId}", produces = "application/json;charset=UTF-8")
+    public ResponseEntity<Zone> getZoneByZoneId(@PathVariable("zoneId") String zoneId) {
+        Zone zone = zoneService.getZoneByZoneId(zoneId);
+        zone.toNewView();
+        return new ResponseEntity<Zone>(zone, HttpStatus.OK);
+    }
 
 }

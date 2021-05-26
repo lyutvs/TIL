@@ -8,8 +8,8 @@ import io.penguinstats.model.GeoIP;
 
 public interface GeoIPLocationService {
 
-	GeoIP getIpLocation(String ip) throws IOException, GeoIp2Exception;
+    GeoIP getIpLocation(String ip) throws IOException, GeoIp2Exception;
 
-	boolean isFromChinaMainland(String ip);
+    boolean isFromChinaMainland(String ip);
 
 }

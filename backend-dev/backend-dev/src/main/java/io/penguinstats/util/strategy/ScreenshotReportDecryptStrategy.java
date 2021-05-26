@@ -41,7 +41,7 @@ public class ScreenshotReportDecryptStrategy implements DecryptStrategy {
         }
         byte[] iv = new byte[16];
         for (int i = 0; i < 16; i++) {
-            iv[i] = (byte)ivArr.getInt(i);
+            iv[i] = (byte) ivArr.getInt(i);
         }
         try {
             String decryptedAESKeyBase64 = RSAUtil.decryptDataOnJava(encryptedAESKey, privateKey);

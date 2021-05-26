@@ -22,37 +22,37 @@ import lombok.experimental.Accessors;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class TrendQuery implements Serializable, BasicQuery {
 
-	private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
-	public TrendQuery(DropMatrixElementService dropMatrixElementService) {
-		this.dropMatrixElementService = dropMatrixElementService;
-	}
+    public TrendQuery(DropMatrixElementService dropMatrixElementService) {
+        this.dropMatrixElementService = dropMatrixElementService;
+    }
 
-	@JsonIgnore
-	private DropMatrixElementService dropMatrixElementService;
+    @JsonIgnore
+    private DropMatrixElementService dropMatrixElementService;
 
-	private Server server;
+    private Server server;
 
-	private String stageId;
+    private String stageId;
 
-	private List<String> itemIds;
+    private List<String> itemIds;
 
-	private Long start;
+    private Long start;
 
-	private Long end;
+    private Long end;
 
-	private String userID;
+    private String userID;
 
-	private Long interval;
+    private Long interval;
 
-	private Integer timeout;
+    private Integer timeout;
 
-	@Override
-	public List<? extends MatrixElement> execute() throws Exception {
-		return QueryUtil.runQuery(
-				() -> dropMatrixElementService.generateCustomDropMatrixElements(server, stageId, itemIds, start, end,
-						Optional.ofNullable(userID).map(userID -> Arrays.asList(userID)).orElse(null), interval),
-				timeout);
-	}
+    @Override
+    public List<? extends MatrixElement> execute() throws Exception {
+        return QueryUtil.runQuery(
+                () -> dropMatrixElementService.generateCustomDropMatrixElements(server, stageId, itemIds, start, end,
+                        Optional.ofNullable(userID).map(userID -> Arrays.asList(userID)).orElse(null), interval),
+                timeout);
+    }
 
 }

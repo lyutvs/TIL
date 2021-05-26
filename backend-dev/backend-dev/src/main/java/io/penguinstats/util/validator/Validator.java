@@ -2,6 +2,6 @@ package io.penguinstats.util.validator;
 
 public interface Validator {
 
-	boolean validate(ValidatorContext context);
+    boolean validate(ValidatorContext context);
 
 }

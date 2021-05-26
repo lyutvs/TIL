@@ -17,6 +17,6 @@ console.log(foo.age);
 foo.major = 'electronics engineering'
 
 
-foo['full-name']= 'foo bar';
-console.log(foo.full-name);
+foo['full-name'] = 'foo bar';
+console.log(foo.full - name);
 console.log(foo['full-name']);

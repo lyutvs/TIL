@@ -192,7 +192,7 @@ public class DropMatrixElementServiceImpl implements DropMatrixElementService {
 
     @Override
     public List<DropMatrixElement> generateCustomDropMatrixElements(Server server, String stageId, List<String> itemIds,
-            Long start, Long end, List<String> userIDs, Long interval) {
+                                                                    Long start, Long end, List<String> userIDs, Long interval) {
         List<TimeRange> splittedRanges = timeRangeService.getSplittedTimeRanges(server, stageId, start, end);
         Map<String, List<TimeRange>> timeRangeMap = new HashMap<>();
         timeRangeMap.put(stageId, splittedRanges);
@@ -223,7 +223,7 @@ public class DropMatrixElementServiceImpl implements DropMatrixElementService {
     }
 
     private List<DropMatrixElement> generateDropMatrixElementsFromTimeRangeMapByStageId(Server server,
-            Map<String, List<TimeRange>> timeRangeMap, List<String> itemIds, List<String> userIDs, Boolean isPast) {
+                                                                                        Map<String, List<TimeRange>> timeRangeMap, List<String> itemIds, List<String> userIDs, Boolean isPast) {
         Integer maxSize = null;
         for (String stageId : timeRangeMap.keySet()) {
             List<TimeRange> ranges = timeRangeMap.get(stageId);
@@ -310,7 +310,7 @@ public class DropMatrixElementServiceImpl implements DropMatrixElementService {
     }
 
     private List<DropMatrixElement> generateSegmentedDropMatrixElements(Server server, String stageId,
-            List<String> itemIds, Long start, Long end, List<String> userIDs, Long interval) {
+                                                                        List<String> itemIds, Long start, Long end, List<String> userIDs, Long interval) {
         if (end == null)
             end = System.currentTimeMillis();
         if (start == null || start.compareTo(end) >= 0)

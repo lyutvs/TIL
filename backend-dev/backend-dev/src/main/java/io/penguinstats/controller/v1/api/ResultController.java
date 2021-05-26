@@ -20,13 +20,13 @@ import io.swagger.annotations.ApiOperation;
 @Deprecated
 public class ResultController {
 
-	@ApiOperation("Get matrix")
-	@GetMapping(path = "/matrix", produces = "application/json;charset=UTF-8")
-	public ResponseEntity<String> getMatrix(HttpServletRequest request) {
-		HttpHeaders headers = new HttpHeaders();
-		headers.add(CustomHeader.X_PENGUIN_UPGRAGE, Constant.API_V2);
-		return new ResponseEntity<>("Penguin Stats api v1 is not supported any more. Please use v2 instead, thanks.",
-				headers, HttpStatus.NOT_FOUND);
-	}
+    @ApiOperation("Get matrix")
+    @GetMapping(path = "/matrix", produces = "application/json;charset=UTF-8")
+    public ResponseEntity<String> getMatrix(HttpServletRequest request) {
+        HttpHeaders headers = new HttpHeaders();
+        headers.add(CustomHeader.X_PENGUIN_UPGRAGE, Constant.API_V2);
+        return new ResponseEntity<>("Penguin Stats api v1 is not supported any more. Please use v2 instead, thanks.",
+                headers, HttpStatus.NOT_FOUND);
+    }
 
 }

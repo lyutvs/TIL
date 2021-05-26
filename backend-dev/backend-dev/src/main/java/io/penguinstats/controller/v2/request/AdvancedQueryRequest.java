@@ -20,9 +20,9 @@ import lombok.NoArgsConstructor;
 @ApiModel(description = "The request model for advanced query.")
 public class AdvancedQueryRequest {
 
-	@ApiModelProperty(notes = "The list of queries.")
-	@NotNull
-	@Valid
-	private List<SingleQuery> queries;
+    @ApiModelProperty(notes = "The list of queries.")
+    @NotNull
+    @Valid
+    private List<SingleQuery> queries;
 
 }

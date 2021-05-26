@@ -1,4 +1,4 @@
-const foo={
+const foo = {
     name: 'foo',
     nickname: 'babo'
 };

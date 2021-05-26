@@ -20,33 +20,33 @@ import lombok.experimental.Accessors;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class GlobalPatternQuery implements Serializable, BasicQuery {
 
-	private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
-	public GlobalPatternQuery(PatternMatrixElementService patternMatrixElementService) {
-		this.patternMatrixElementService = patternMatrixElementService;
-	}
+    public GlobalPatternQuery(PatternMatrixElementService patternMatrixElementService) {
+        this.patternMatrixElementService = patternMatrixElementService;
+    }
 
-	@JsonIgnore
-	private PatternMatrixElementService patternMatrixElementService;
+    @JsonIgnore
+    private PatternMatrixElementService patternMatrixElementService;
 
-	private Server server;
+    private Server server;
 
-	private String stageId;
+    private String stageId;
 
-	private List<String> itemIds;
+    private List<String> itemIds;
 
-	private Long start;
+    private Long start;
 
-	private Long end;
+    private Long end;
 
-	private String userID;
+    private String userID;
 
-	private Integer timeout;
+    private Integer timeout;
 
-	@Override
-	public List<? extends MatrixElement> execute() throws Exception {
-		return QueryUtil.runQuery(() -> patternMatrixElementService.generateGlobalPatternMatrixElements(server, userID),
-				timeout);
-	}
+    @Override
+    public List<? extends MatrixElement> execute() throws Exception {
+        return QueryUtil.runQuery(() -> patternMatrixElementService.generateGlobalPatternMatrixElements(server, userID),
+                timeout);
+    }
 
 }

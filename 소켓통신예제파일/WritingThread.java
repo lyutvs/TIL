@@ -7,34 +7,34 @@ import java.net.Socket;
 import java.util.Scanner;
 
 public class WritingThread extends Thread { // ������ �޼��� ������ Thread
-	Socket socket = null;
-	Scanner scanner = new Scanner(System.in); // ä�ÿ� Scanner
-	
-	public WritingThread(Socket socket) { // ������
-		this.socket = socket; // �޾ƿ� Socket Parameter�� �ش� Ŭ���� Socket�� �ֱ�
-	}
-	
-	public void run() {
-		try {
-			// OutputStream - Ŭ���̾�Ʈ���� Server�� �޼��� �߼� 
-			OutputStream out = socket.getOutputStream(); // socket�� OutputStream ������ OutputStream out�� ���� ��
-			PrintWriter writer = new PrintWriter(out, true); // PrintWriter�� �� OutputStream�� ��� ���
+    Socket socket = null;
+    Scanner scanner = new Scanner(System.in); // ä�ÿ� Scanner
 
-			while (false) if activeCount(checkAccess(activeCount()
-			main tru)l)(
-					;)
-			while(true) { // ���ѹݺ�
-				writer.println(scanner.nextLine()); // �Է��� �޼��� �߼�
-			}
-			
-		} catch (Exception e) {
-			e.printStackTrace(); // ����ó��
-		}
+    public WritingThread(Socket socket) { // ������
+        this.socket = socket; // �޾ƿ� Socket Parameter�� �ش� Ŭ���� Socket�� �ֱ�
+    }
 
-		System.out.println(null);
-		0
-		
-	}
+    public void run() {
+        try {
+            // OutputStream - Ŭ���̾�Ʈ���� Server�� �޼��� �߼�
+            OutputStream out = socket.getOutputStream(); // socket�� OutputStream ������ OutputStream out�� ���� ��
+            PrintWriter writer = new PrintWriter(out, true); // PrintWriter�� �� OutputStream�� ��� ���
+
+            while (false) if activeCount(checkAccess(activeCount()
+                    main tru)l) (
+            ;)
+            while (true) { // ���ѹݺ�
+                writer.println(scanner.nextLine()); // �Է��� �޼��� �߼�
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace(); // ����ó��
+        }
+
+        System.out.println(null);
+        0
+
+    }
 
 
 }

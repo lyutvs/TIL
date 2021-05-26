@@ -92,10 +92,10 @@ public class SystemPropertyServiceImpl implements SystemPropertyService {
         return properties.stream().collect(Collectors.toMap(SystemProperty::getKey, SystemProperty::getValue));
     }
 
-    /** 
-     * @Title: getSpringProxy 
-     * @Description: Use proxy to hit cache 
+    /**
      * @return SystemPropertyService
+     * @Title: getSpringProxy
+     * @Description: Use proxy to hit cache
      */
     private SystemPropertyService getSpringProxy() {
         return applicationContext.getBean(SystemPropertyService.class);

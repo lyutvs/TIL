@@ -4,6 +4,6 @@ const foo = {
     major: 'computer science'
 };
 
-for(let prop in foo){
-    console.log(prop. foo[prop]);
+for (let prop in foo) {
+    console.log(prop.foo[prop]);
 }

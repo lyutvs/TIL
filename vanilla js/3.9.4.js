@@ -1,8 +1,11 @@
-const arr = ["a",'b','c','e','d'];
+const arr = ["a", 'b', 'c', 'e', 'd'];
 const obj = {
     name:
-    age;    
+    age;
     locathon:
 };
 
-function.call   
+function
+
+.
+call

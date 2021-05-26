@@ -13,19 +13,19 @@ import io.penguinstats.util.LastUpdateTimeUtil;
 @Service("noticeService")
 public class NoticeServiceImpl implements NoticeService {
 
-	@Autowired
-	private NoticeDao noticeDao;
+    @Autowired
+    private NoticeDao noticeDao;
 
-	@Override
-	public void saveNotice(Notice notice) {
-		noticeDao.save(notice);
-	}
+    @Override
+    public void saveNotice(Notice notice) {
+        noticeDao.save(notice);
+    }
 
-	@Override
-	public List<Notice> getAllNotice() {
-		List<Notice> result = noticeDao.findAll();
-		LastUpdateTimeUtil.setCurrentTimestamp(LastUpdateMapKeyName.NOTICE_LIST);
-		return result;
-	}
+    @Override
+    public List<Notice> getAllNotice() {
+        List<Notice> result = noticeDao.findAll();
+        LastUpdateTimeUtil.setCurrentTimestamp(LastUpdateMapKeyName.NOTICE_LIST);
+        return result;
+    }
 
 }

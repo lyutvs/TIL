@@ -23,15 +23,15 @@ import lombok.NoArgsConstructor;
 @ApiModel(description = "The model of system property key value pair.")
 public class SystemProperty implements Serializable {
 
-	private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
-	@Id
-	@JsonIgnore
-	private ObjectId id;
+    @Id
+    @JsonIgnore
+    private ObjectId id;
 
-	@Indexed
-	private String key;
+    @Indexed
+    private String key;
 
-	private String value;
+    private String value;
 
 }

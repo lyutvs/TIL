@@ -1,6 +1,7 @@
 package io.penguinstats.controller.v1.api;
 
 import io.penguinstats.util.exception.NotFoundException;
+
 import java.util.List;
 
 import io.swagger.annotations.Api;
@@ -30,39 +31,39 @@ import io.swagger.annotations.ApiOperation;
 @Deprecated
 public class ItemController {
 
-	@Autowired
-	private ItemService itemService;
+    @Autowired
+    private ItemService itemService;
 
-	@ApiOperation("Get all items")
-	@GetMapping(produces = "application/json;charset=UTF-8")
-	@ResponseStatus(HttpStatus.OK)
-	public ResponseEntity<List<Item>>
-			getAllItems(@RequestParam(name = "i18n", required = false, defaultValue = "false") boolean i18n) {
-		List<Item> items = itemService.getAllItems();
-		if (!i18n)
-			items.forEach(item -> item.toNonI18nView());
-		HttpHeaders headers = new HttpHeaders();
-		headers.add("LAST-UPDATE-TIME", LastUpdateTimeUtil.getLastUpdateTime("itemList").toString());
-		headers.add(CustomHeader.X_PENGUIN_UPGRAGE, Constant.API_V2);
-		return new ResponseEntity<List<Item>>(items, headers, HttpStatus.OK);
-	}
+    @ApiOperation("Get all items")
+    @GetMapping(produces = "application/json;charset=UTF-8")
+    @ResponseStatus(HttpStatus.OK)
+    public ResponseEntity<List<Item>>
+    getAllItems(@RequestParam(name = "i18n", required = false, defaultValue = "false") boolean i18n) {
+        List<Item> items = itemService.getAllItems();
+        if (!i18n)
+            items.forEach(item -> item.toNonI18nView());
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("LAST-UPDATE-TIME", LastUpdateTimeUtil.getLastUpdateTime("itemList").toString());
+        headers.add(CustomHeader.X_PENGUIN_UPGRAGE, Constant.API_V2);
+        return new ResponseEntity<List<Item>>(items, headers, HttpStatus.OK);
+    }
 
-	@ApiOperation("Get item by item ID")
-	@GetMapping(path = "/{itemId}", produces = "application/json;charset=UTF-8")
-	public ResponseEntity<Item> getItemByItemId(@PathVariable("itemId") String itemId,
-			@RequestParam(name = "i18n", required = false, defaultValue = "false") boolean i18n) throws NotFoundException {
-		Item item = itemService.getItemByItemId(itemId);
-		HttpHeaders headers = new HttpHeaders();
-		headers.add(CustomHeader.X_PENGUIN_UPGRAGE, Constant.API_V2);
-		if (!i18n)
-			item.toNonI18nView();
-		return new ResponseEntity<Item>(item, headers, HttpStatus.OK);
-	}
+    @ApiOperation("Get item by item ID")
+    @GetMapping(path = "/{itemId}", produces = "application/json;charset=UTF-8")
+    public ResponseEntity<Item> getItemByItemId(@PathVariable("itemId") String itemId,
+                                                @RequestParam(name = "i18n", required = false, defaultValue = "false") boolean i18n) throws NotFoundException {
+        Item item = itemService.getItemByItemId(itemId);
+        HttpHeaders headers = new HttpHeaders();
+        headers.add(CustomHeader.X_PENGUIN_UPGRAGE, Constant.API_V2);
+        if (!i18n)
+            item.toNonI18nView();
+        return new ResponseEntity<Item>(item, headers, HttpStatus.OK);
+    }
 
-	@GetMapping(path = "/cache")
-	@Caching(evict = {@CacheEvict(value = "lists", key = "'itemList'"), @CacheEvict(value = "maps", key = "'itemMap'")})
-	public ResponseEntity<String> evictItemCache() {
-		return new ResponseEntity<>(HttpStatus.OK);
-	}
+    @GetMapping(path = "/cache")
+    @Caching(evict = {@CacheEvict(value = "lists", key = "'itemList'"), @CacheEvict(value = "maps", key = "'itemMap'")})
+    public ResponseEntity<String> evictItemCache() {
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
 
 }

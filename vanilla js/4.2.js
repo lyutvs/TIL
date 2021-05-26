@@ -1,6 +1,6 @@
-let self = function(){
+let self = function () {
     console.log('a');
-    return function(){
+    return function () {
         console.log('b');
     }
 }

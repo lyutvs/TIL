@@ -20,28 +20,28 @@ import lombok.NoArgsConstructor;
 @ApiModel(description = "The model for basic single query.")
 public class SingleQuery {
 
-	@ApiModelProperty(notes = "The server to be queried. Cannot be null.")
-	private Server server;
+    @ApiModelProperty(notes = "The server to be queried. Cannot be null.")
+    private Server server;
 
-	@ApiModelProperty(notes = "The stage to be queried. Cannot be blank.")
-	@NotBlank
-	private String stageId;
+    @ApiModelProperty(notes = "The stage to be queried. Cannot be blank.")
+    @NotBlank
+    private String stageId;
 
-	@ApiModelProperty(
-			notes = "Result filter by itemIds. If empty, no filter will be apllied. Otherwise, only items in this list will show in the result.")
-	private List<String> itemIds;
+    @ApiModelProperty(
+            notes = "Result filter by itemIds. If empty, no filter will be apllied. Otherwise, only items in this list will show in the result.")
+    private List<String> itemIds;
 
-	@ApiModelProperty(notes = "The start time of the query time range. Nullable.")
-	private Long start;
+    @ApiModelProperty(notes = "The start time of the query time range. Nullable.")
+    private Long start;
 
-	@ApiModelProperty(notes = "The end time of the query time range. Nullable.")
-	private Long end;
+    @ApiModelProperty(notes = "The end time of the query time range. Nullable.")
+    private Long end;
 
-	@ApiModelProperty(
-			notes = "If null, then this query will be \"matrix query\"; Otherwise, it will be \"trend query\" based on the given interval (the length of each section, unit is millisecond).")
-	private Long interval;
+    @ApiModelProperty(
+            notes = "If null, then this query will be \"matrix query\"; Otherwise, it will be \"trend query\" based on the given interval (the length of each section, unit is millisecond).")
+    private Long interval;
 
-	@ApiModelProperty(notes = "Indicate whether showing personal data.")
-	private Boolean isPersonal;
+    @ApiModelProperty(notes = "Indicate whether showing personal data.")
+    private Boolean isPersonal;
 
 }

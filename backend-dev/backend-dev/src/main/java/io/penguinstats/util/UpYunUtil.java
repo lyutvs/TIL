@@ -25,22 +25,23 @@ public class UpYunUtil {
 
     private static final String HMAC_SHA1_ALGORITHM = "HmacSHA1";
 
-    private UpYunUtil() {}
+    private UpYunUtil() {
+    }
 
     /**
      * Get 'Authorization' for UpYun file uploading
      *
-     * @param method Should be POST
+     * @param method   Should be POST
      * @param dateTime The timestamp of the request. Must be consistent with the one in the policy. Optional
-     * @param path /&lt;bucket&gt;
+     * @param path     /&lt;bucket&gt;
      * @param policy
      * @param userName Operator's name
      * @param password
-     * @param md5 Optional
+     * @param md5      Optional
      * @return
      */
     public static String getAuthorization(String method, Long dateTime, String path, String policy, String userName,
-            String password, String md5) {
+                                          String password, String md5) {
         StringBuilder sb = new StringBuilder();
         String sp = "&";
 
@@ -84,9 +85,9 @@ public class UpYunUtil {
      * Calculate policy
      *
      * @param bucket
-     * @param saveKey The path of the saved file. Example: /upload_{random32}{.suffix}
+     * @param saveKey    The path of the saved file. Example: /upload_{random32}{.suffix}
      * @param expiration The expiration of the request. UNIX UTC timestamp. Unit is second.
-     * @param notifyUrl The callback URL. Optional
+     * @param notifyUrl  The callback URL. Optional
      * @return
      */
     public static String getPolicy(String bucket, String saveKey, Long expiration, String notifyUrl) {

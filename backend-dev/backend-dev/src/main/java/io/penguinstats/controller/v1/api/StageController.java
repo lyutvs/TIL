@@ -1,6 +1,7 @@
 package io.penguinstats.controller.v1.api;
 
 import io.penguinstats.util.exception.NotFoundException;
+
 import java.util.List;
 
 import io.swagger.annotations.Api;
@@ -29,40 +30,40 @@ import io.swagger.annotations.ApiOperation;
 @Deprecated
 public class StageController {
 
-	@Autowired
-	private StageService stageService;
+    @Autowired
+    private StageService stageService;
 
-	@ApiOperation("Get all stages")
-	@GetMapping(produces = "application/json;charset=UTF-8")
-	public ResponseEntity<List<Stage>> getAllStages(@RequestParam(value = "zoneId", required = false) String zoneId) {
-		List<Stage> stages = zoneId == null ? stageService.getAllStages() : stageService.getStagesByZoneId(zoneId);
-		stages.forEach(stage -> stage.toLegacyView());
-		if (zoneId == null) {
-			HttpHeaders headers = new HttpHeaders();
-			headers.add("LAST-UPDATE-TIME", LastUpdateTimeUtil.getLastUpdateTime("stageList").toString());
-			headers.add(CustomHeader.X_PENGUIN_UPGRAGE, Constant.API_V2);
-			return new ResponseEntity<List<Stage>>(stages, headers, HttpStatus.OK);
-		} else {
-			return new ResponseEntity<List<Stage>>(stages, HttpStatus.OK);
-		}
+    @ApiOperation("Get all stages")
+    @GetMapping(produces = "application/json;charset=UTF-8")
+    public ResponseEntity<List<Stage>> getAllStages(@RequestParam(value = "zoneId", required = false) String zoneId) {
+        List<Stage> stages = zoneId == null ? stageService.getAllStages() : stageService.getStagesByZoneId(zoneId);
+        stages.forEach(stage -> stage.toLegacyView());
+        if (zoneId == null) {
+            HttpHeaders headers = new HttpHeaders();
+            headers.add("LAST-UPDATE-TIME", LastUpdateTimeUtil.getLastUpdateTime("stageList").toString());
+            headers.add(CustomHeader.X_PENGUIN_UPGRAGE, Constant.API_V2);
+            return new ResponseEntity<List<Stage>>(stages, headers, HttpStatus.OK);
+        } else {
+            return new ResponseEntity<List<Stage>>(stages, HttpStatus.OK);
+        }
 
-	}
+    }
 
-	@ApiOperation("Get stage by stage ID")
-	@GetMapping(path = "/{stageId}", produces = "application/json;charset=UTF-8")
-	public ResponseEntity<Stage> getStageByStageId(@PathVariable("stageId") String stageId) throws NotFoundException {
-		Stage stage = stageService.getStageByStageId(stageId);
-		stage.toLegacyView();
-		HttpHeaders headers = new HttpHeaders();
-		headers.add(CustomHeader.X_PENGUIN_UPGRAGE, Constant.API_V2);
-		return new ResponseEntity<Stage>(stage, headers, HttpStatus.OK);
-	}
+    @ApiOperation("Get stage by stage ID")
+    @GetMapping(path = "/{stageId}", produces = "application/json;charset=UTF-8")
+    public ResponseEntity<Stage> getStageByStageId(@PathVariable("stageId") String stageId) throws NotFoundException {
+        Stage stage = stageService.getStageByStageId(stageId);
+        stage.toLegacyView();
+        HttpHeaders headers = new HttpHeaders();
+        headers.add(CustomHeader.X_PENGUIN_UPGRAGE, Constant.API_V2);
+        return new ResponseEntity<Stage>(stage, headers, HttpStatus.OK);
+    }
 
-	@GetMapping(path = "/cache")
-	@Caching(evict = {@CacheEvict(value = "lists", key = "'stageList'"),
-			@CacheEvict(value = "maps", key = "'stageMap'")})
-	public ResponseEntity<String> evictStageCache() {
-		return new ResponseEntity<>(HttpStatus.OK);
-	}
+    @GetMapping(path = "/cache")
+    @Caching(evict = {@CacheEvict(value = "lists", key = "'stageList'"),
+            @CacheEvict(value = "maps", key = "'stageMap'")})
+    public ResponseEntity<String> evictStageCache() {
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
 
 }

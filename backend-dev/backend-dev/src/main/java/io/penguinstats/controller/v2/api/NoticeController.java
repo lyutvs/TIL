@@ -25,19 +25,19 @@ import io.swagger.annotations.ApiOperation;
 @Api(tags = {"Notice"})
 public class NoticeController {
 
-	@Autowired
-	private NoticeService noticeService;
+    @Autowired
+    private NoticeService noticeService;
 
-	@ApiOperation(value = "Get all notice")
-	@GetMapping(produces = "application/json;charset=UTF-8")
-	@ResponseStatus(HttpStatus.OK)
-	public ResponseEntity<List<Notice>> getAllNotice() {
-		List<Notice> items = noticeService.getAllNotice();
-		HttpHeaders headers = new HttpHeaders();
-		String lastModified =
-				DateUtil.formatDate(new Date(LastUpdateTimeUtil.getLastUpdateTime(LastUpdateMapKeyName.NOTICE_LIST)));
-		headers.add(HttpHeaders.LAST_MODIFIED, lastModified);
-		return new ResponseEntity<List<Notice>>(items, headers, HttpStatus.OK);
-	}
+    @ApiOperation(value = "Get all notice")
+    @GetMapping(produces = "application/json;charset=UTF-8")
+    @ResponseStatus(HttpStatus.OK)
+    public ResponseEntity<List<Notice>> getAllNotice() {
+        List<Notice> items = noticeService.getAllNotice();
+        HttpHeaders headers = new HttpHeaders();
+        String lastModified =
+                DateUtil.formatDate(new Date(LastUpdateTimeUtil.getLastUpdateTime(LastUpdateMapKeyName.NOTICE_LIST)));
+        headers.add(HttpHeaders.LAST_MODIFIED, lastModified);
+        return new ResponseEntity<List<Notice>>(items, headers, HttpStatus.OK);
+    }
 
 }

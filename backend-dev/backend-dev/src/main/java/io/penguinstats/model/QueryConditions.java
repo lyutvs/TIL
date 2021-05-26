@@ -14,79 +14,79 @@ import lombok.Setter;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class QueryConditions {
 
-	private List<StageWithTimeRange> stages;
-	private List<String> itemIds;
-	private List<Server> servers;
-	private List<String> userIDs;
-	private Long interval;
-	private Long range;
+    private List<StageWithTimeRange> stages;
+    private List<String> itemIds;
+    private List<Server> servers;
+    private List<String> userIDs;
+    private Long interval;
+    private Long range;
 
-	public QueryConditions() {
-		this.stages = new ArrayList<>();
-		this.itemIds = new ArrayList<>();
-		this.servers = new ArrayList<>();
-		this.userIDs = new ArrayList<>();
-		this.interval = null;
-		this.range = null;
-	}
+    public QueryConditions() {
+        this.stages = new ArrayList<>();
+        this.itemIds = new ArrayList<>();
+        this.servers = new ArrayList<>();
+        this.userIDs = new ArrayList<>();
+        this.interval = null;
+        this.range = null;
+    }
 
-	public QueryConditions addStage(String stageId, Long start, Long end) {
-		this.stages.add(new StageWithTimeRange(stageId, start, end));
-		return this;
-	}
+    public QueryConditions addStage(String stageId, Long start, Long end) {
+        this.stages.add(new StageWithTimeRange(stageId, start, end));
+        return this;
+    }
 
-	public QueryConditions addItemId(String itemId) {
-		this.itemIds.add(itemId);
-		return this;
-	}
+    public QueryConditions addItemId(String itemId) {
+        this.itemIds.add(itemId);
+        return this;
+    }
 
-	public QueryConditions addServer(Server server) {
-		this.servers.add(server);
-		return this;
-	}
+    public QueryConditions addServer(Server server) {
+        this.servers.add(server);
+        return this;
+    }
 
-	public QueryConditions addUserID(String userID) {
-		this.userIDs.add(userID);
-		return this;
-	}
+    public QueryConditions addUserID(String userID) {
+        this.userIDs.add(userID);
+        return this;
+    }
 
-	public QueryConditions setInterval(Long interval) {
-		this.interval = interval;
-		return this;
-	}
+    public QueryConditions setInterval(Long interval) {
+        this.interval = interval;
+        return this;
+    }
 
-	public QueryConditions setRange(Long range) {
-		this.range = range;
-		return this;
-	}
+    public QueryConditions setRange(Long range) {
+        this.range = range;
+        return this;
+    }
 
-	@JsonIgnore
-	@Override
-	public String toString() {
-		return "QueryConditions [stages=" + stages + ", itemIds=" + itemIds + ", servers=" + servers + ", userIDs="
-				+ userIDs + ", interval=" + interval + ", range = " + range + "]";
-	}
+    @JsonIgnore
+    @Override
+    public String toString() {
+        return "QueryConditions [stages=" + stages + ", itemIds=" + itemIds + ", servers=" + servers + ", userIDs="
+                + userIDs + ", interval=" + interval + ", range = " + range + "]";
+    }
 
-	@Getter
-	@Setter
-	public static class StageWithTimeRange {
+    @Getter
+    @Setter
+    public static class StageWithTimeRange {
 
-		private String stageId;
-		private Long start;
-		private Long end;
+        private String stageId;
+        private Long start;
+        private Long end;
 
-		public StageWithTimeRange(String stageId, Long start, Long end) {
-			this.stageId = stageId;
-			this.start = start;
-			this.end = end;
-		}
+        public StageWithTimeRange(String stageId, Long start, Long end) {
+            this.stageId = stageId;
+            this.start = start;
+            this.end = end;
+        }
 
-		@JsonIgnore
-		@Override
-		public String toString() {
-			return stageId + ": " + start + "-" + end;
-		}
+        @JsonIgnore
+        @Override
+        public String toString() {
+            return stageId + ": " + start + "-" + end;
+        }
 
-	}
+    }
 
 }

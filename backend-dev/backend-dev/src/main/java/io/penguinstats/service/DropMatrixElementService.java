@@ -36,6 +36,6 @@ public interface DropMatrixElementService {
     List<DropMatrixElement> generateSegmentedGlobalDropMatrixElements(Server server, Long interval, Long range);
 
     List<DropMatrixElement> generateCustomDropMatrixElements(Server server, String stageId, List<String> itemIds,
-            Long start, Long end, List<String> userIDs, Long interval);
+                                                             Long start, Long end, List<String> userIDs, Long interval);
 
 }

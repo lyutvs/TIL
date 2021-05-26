@@ -17,11 +17,11 @@ import lombok.NoArgsConstructor;
 @ApiModel(description = "The response model for an item with its quantity.")
 public class ItemQuantity implements Serializable {
 
-	private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
-	private String itemId;
+    private String itemId;
 
-	@ApiModelProperty(notes = "The number of times this item has dropped")
-	private Integer quantity;
+    @ApiModelProperty(notes = "The number of times this item has dropped")
+    private Integer quantity;
 
 }

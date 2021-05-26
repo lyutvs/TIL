@@ -51,9 +51,9 @@ public class SiteStatsController {
     @ApiOperation(value = "Get statistical data for the website.")
     @GetMapping(produces = "application/json;charset=UTF-8")
     public ResponseEntity<SiteStatsResponse>
-            getSiteStats(@ApiParam(value = "Indicate which server you want to query. Default is CN.",
-                    required = false) @RequestParam(name = "server", required = false,
-                            defaultValue = "CN") Server server) {
+    getSiteStats(@ApiParam(value = "Indicate which server you want to query. Default is CN.",
+            required = false) @RequestParam(name = "server", required = false,
+            defaultValue = "CN") Server server) {
         final long mills_24h = TimeUnit.DAYS.toMillis(1);
 
         List<StageTimes> totalStageTimes = null;

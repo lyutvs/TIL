@@ -23,21 +23,21 @@ import lombok.NoArgsConstructor;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class EventPeriod implements Serializable {
 
-	private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
-	@Id
-	@JsonIgnore
-	private ObjectId id;
+    @Id
+    @JsonIgnore
+    private ObjectId id;
 
-	private Long start;
+    private Long start;
 
-	private Long end;
+    private Long end;
 
-	@JsonProperty("label_i18n")
-	private Map<String, String> labelMap;
+    @JsonProperty("label_i18n")
+    private Map<String, String> labelMap;
 
-	private ExistConditions conditions;
+    private ExistConditions conditions;
 
-	private Map<Server, Existence> existence;
+    private Map<Server, Existence> existence;
 
 }

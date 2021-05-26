@@ -17,8 +17,8 @@ import lombok.NoArgsConstructor;
 @ApiModel(description = "The request model for recalling last drop report.")
 public class RecallLastReportRequest {
 
-	@ApiModelProperty(notes = "The hash of the last submitted drop record.")
-	@NotBlank
-	private String reportHash;
+    @ApiModelProperty(notes = "The hash of the last submitted drop record.")
+    @NotBlank
+    private String reportHash;
 
 }

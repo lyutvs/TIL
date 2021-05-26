@@ -20,28 +20,28 @@ import lombok.experimental.Accessors;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class GlobalTrendQuery implements Serializable, BasicQuery {
 
-	private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
-	public GlobalTrendQuery(DropMatrixElementService dropMatrixElementService) {
-		this.dropMatrixElementService = dropMatrixElementService;
-	}
+    public GlobalTrendQuery(DropMatrixElementService dropMatrixElementService) {
+        this.dropMatrixElementService = dropMatrixElementService;
+    }
 
-	@JsonIgnore
-	private DropMatrixElementService dropMatrixElementService;
+    @JsonIgnore
+    private DropMatrixElementService dropMatrixElementService;
 
-	private Server server;
+    private Server server;
 
-	private Long interval;
+    private Long interval;
 
-	private Long range;
+    private Long range;
 
-	private Integer timeout;
+    private Integer timeout;
 
-	@Override
-	public List<? extends MatrixElement> execute() throws Exception {
-		return QueryUtil.runQuery(
-				() -> dropMatrixElementService.generateSegmentedGlobalDropMatrixElements(server, interval, range),
-				timeout);
-	}
+    @Override
+    public List<? extends MatrixElement> execute() throws Exception {
+        return QueryUtil.runQuery(
+                () -> dropMatrixElementService.generateSegmentedGlobalDropMatrixElements(server, interval, range),
+                timeout);
+    }
 
 }

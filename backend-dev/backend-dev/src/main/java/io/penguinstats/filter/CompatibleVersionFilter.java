@@ -17,17 +17,19 @@ import io.penguinstats.constant.Constant;
 public class CompatibleVersionFilter implements Filter {
 
     @Override
-    public void init(FilterConfig filterConfig) throws ServletException {}
+    public void init(FilterConfig filterConfig) throws ServletException {
+    }
 
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
             throws IOException, ServletException {
-        HttpServletResponse res = (HttpServletResponse)response;
+        HttpServletResponse res = (HttpServletResponse) response;
         res.setHeader(Constant.CustomHeader.X_PENGUIN_COMPATIBLE, Constant.CompatibleVersion.FRONTEND_V2_3_4_0);
         chain.doFilter(request, response);
     }
 
     @Override
-    public void destroy() {}
+    public void destroy() {
+    }
 
 }

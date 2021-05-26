@@ -28,61 +28,61 @@ import io.swagger.annotations.ApiParam;
 @Api(tags = {"Result"})
 public class ResultController {
 
-	@Autowired
-	private ResultUtil resultUtil;
+    @Autowired
+    private ResultUtil resultUtil;
 
-	@ApiOperation(value = "Get matrix result",
-			notes = "Return the Result Matrix in the \"lastest accumulatable time ranges\". Detailed instructions can be found at: https://developer.penguin-stats.io/docs/api-v2-instruction/matrix-api")
-	@GetMapping(path = "/matrix", produces = "application/json;charset=UTF-8")
-	public ResponseEntity<MatrixQueryResponse> getMatrix(HttpServletRequest request,
-			@ApiParam(value = "Whether to see personal drop matrix or not. Default to be false.",
-					required = false) @RequestParam(name = "is_personal", required = false,
-							defaultValue = "false") boolean isPersonal,
-			@ApiParam(value = "Whether showing closed stages or not. Default to be false.",
-					required = false) @RequestParam(name = "show_closed_zones", required = false,
-							defaultValue = "false") boolean showClosedZones,
-			@ApiParam(value = "Indicate which server you want to query. Default is CN.",
-					required = false) @RequestParam(name = "server", required = false,
-							defaultValue = "CN") Server server,
-			@ApiParam(
-					value = "Do filter on final result by stage. It should be a list of stageIds separated by commas.",
-					required = false) @RequestParam(name = "stageFilter", required = false) String stageFilter,
-			@ApiParam(value = "Do filter on final result by item. It should be a list of itemIds separated by commas.",
-					required = false) @RequestParam(name = "itemFilter", required = false) String itemFilter)
-			throws Exception {
-		return resultUtil.getMatrixHelper(request, server, showClosedZones, stageFilter, itemFilter, isPersonal);
-	}
+    @ApiOperation(value = "Get matrix result",
+            notes = "Return the Result Matrix in the \"lastest accumulatable time ranges\". Detailed instructions can be found at: https://developer.penguin-stats.io/docs/api-v2-instruction/matrix-api")
+    @GetMapping(path = "/matrix", produces = "application/json;charset=UTF-8")
+    public ResponseEntity<MatrixQueryResponse> getMatrix(HttpServletRequest request,
+                                                         @ApiParam(value = "Whether to see personal drop matrix or not. Default to be false.",
+                                                                 required = false) @RequestParam(name = "is_personal", required = false,
+                                                                 defaultValue = "false") boolean isPersonal,
+                                                         @ApiParam(value = "Whether showing closed stages or not. Default to be false.",
+                                                                 required = false) @RequestParam(name = "show_closed_zones", required = false,
+                                                                 defaultValue = "false") boolean showClosedZones,
+                                                         @ApiParam(value = "Indicate which server you want to query. Default is CN.",
+                                                                 required = false) @RequestParam(name = "server", required = false,
+                                                                 defaultValue = "CN") Server server,
+                                                         @ApiParam(
+                                                                 value = "Do filter on final result by stage. It should be a list of stageIds separated by commas.",
+                                                                 required = false) @RequestParam(name = "stageFilter", required = false) String stageFilter,
+                                                         @ApiParam(value = "Do filter on final result by item. It should be a list of itemIds separated by commas.",
+                                                                 required = false) @RequestParam(name = "itemFilter", required = false) String itemFilter)
+            throws Exception {
+        return resultUtil.getMatrixHelper(request, server, showClosedZones, stageFilter, itemFilter, isPersonal);
+    }
 
-	@ApiOperation(value = "Get the segmented Result Matrix for all Items and Stages",
-			notes = "Return the segmented Matrix results of server `server`.")
-	@GetMapping(path = "/trends", produces = "application/json;charset=UTF-8")
-	public ResponseEntity<TrendQueryResponse>
-			getAllSegmentedDropResults(@ApiParam(value = "Indicate which server you want to query. Default is CN.",
-					required = false) @RequestParam(name = "server", required = false,
-							defaultValue = "CN") Server server)
-					throws Exception {
-		return resultUtil.getTrendHelper(server);
-	}
+    @ApiOperation(value = "Get the segmented Result Matrix for all Items and Stages",
+            notes = "Return the segmented Matrix results of server `server`.")
+    @GetMapping(path = "/trends", produces = "application/json;charset=UTF-8")
+    public ResponseEntity<TrendQueryResponse>
+    getAllSegmentedDropResults(@ApiParam(value = "Indicate which server you want to query. Default is CN.",
+            required = false) @RequestParam(name = "server", required = false,
+            defaultValue = "CN") Server server)
+            throws Exception {
+        return resultUtil.getTrendHelper(server);
+    }
 
-	@ApiOperation(value = "Get pattern result", notes = "Return the Pattern Result in the \"lastest time ranges\".")
-	@GetMapping(path = "/pattern", produces = "application/json;charset=UTF-8")
-	public ResponseEntity<PatternQueryResponse> getPattern(HttpServletRequest request,
-			@ApiParam(value = "Whether to see personal pattern result or not. Default to be false.",
-					required = false) @RequestParam(name = "is_personal", required = false,
-							defaultValue = "false") boolean isPersonal,
-			@ApiParam(value = "Indicate which server you want to query. Default is CN.",
-					required = false) @RequestParam(name = "server", required = false,
-							defaultValue = "CN") Server server)
-			throws Exception {
-		return resultUtil.getPatternHelper(request, server, isPersonal);
-	}
+    @ApiOperation(value = "Get pattern result", notes = "Return the Pattern Result in the \"lastest time ranges\".")
+    @GetMapping(path = "/pattern", produces = "application/json;charset=UTF-8")
+    public ResponseEntity<PatternQueryResponse> getPattern(HttpServletRequest request,
+                                                           @ApiParam(value = "Whether to see personal pattern result or not. Default to be false.",
+                                                                   required = false) @RequestParam(name = "is_personal", required = false,
+                                                                   defaultValue = "false") boolean isPersonal,
+                                                           @ApiParam(value = "Indicate which server you want to query. Default is CN.",
+                                                                   required = false) @RequestParam(name = "server", required = false,
+                                                                   defaultValue = "CN") Server server)
+            throws Exception {
+        return resultUtil.getPatternHelper(request, server, isPersonal);
+    }
 
-	@ApiOperation(value = "Execute advanced queries",
-			notes = "Execute advanced queries in a batch and return the query results in an array.")
-	@PostMapping(path = "/advanced", produces = "application/json;charset=UTF-8")
-	public ResponseEntity<AdvancedQueryResponse> executeAdvancedQueries(
-			@Valid @RequestBody AdvancedQueryRequest advancedQueryRequest, HttpServletRequest request) {
-		return resultUtil.getAdvancedResultHelper(advancedQueryRequest, request);
-	}
+    @ApiOperation(value = "Execute advanced queries",
+            notes = "Execute advanced queries in a batch and return the query results in an array.")
+    @PostMapping(path = "/advanced", produces = "application/json;charset=UTF-8")
+    public ResponseEntity<AdvancedQueryResponse> executeAdvancedQueries(
+            @Valid @RequestBody AdvancedQueryRequest advancedQueryRequest, HttpServletRequest request) {
+        return resultUtil.getAdvancedResultHelper(advancedQueryRequest, request);
+    }
 
 }

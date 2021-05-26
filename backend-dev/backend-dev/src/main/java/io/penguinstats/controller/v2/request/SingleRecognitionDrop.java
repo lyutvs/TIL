@@ -22,16 +22,16 @@ import lombok.NoArgsConstructor;
 @ApiModel(description = "The model for one drop result from screenshot recognition.")
 public class SingleRecognitionDrop {
 
-	@ApiModelProperty(notes = "The stageId. Cannot be blank.")
-	@NotBlank
-	private String stageId;
+    @ApiModelProperty(notes = "The stageId. Cannot be blank.")
+    @NotBlank
+    private String stageId;
 
-	@ApiModelProperty(notes = "The list of dropped items.")
-	@NotNull
-	private List<TypedDrop> drops;
+    @ApiModelProperty(notes = "The list of dropped items.")
+    @NotNull
+    private List<TypedDrop> drops;
 
-	@ApiModelProperty(notes = "The metadata of the screenshot used in this drop.")
-	@NotNull
-	private ScreenshotMetadata metadata;
+    @ApiModelProperty(notes = "The metadata of the screenshot used in this drop.")
+    @NotNull
+    private ScreenshotMetadata metadata;
 
 }
