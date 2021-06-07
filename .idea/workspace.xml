@@ -5,170 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="29443f56-52d9-49a0-b559-72638acc091b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/JAVA/src/Average.java" beforeDir="false" afterPath="$PROJECT_DIR$/JAVA/src/Average.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVA/src/Leapyear.java" beforeDir="false" afterPath="$PROJECT_DIR$/JAVA/src/Leapyear.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVA/src/Light.java" beforeDir="false" afterPath="$PROJECT_DIR$/JAVA/src/Light.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVA/src/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/JAVA/src/Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/PenguinStatisticsApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/PenguinStatisticsApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/configuration/GeoLocationConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/configuration/GeoLocationConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/configuration/handler/RestExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/configuration/handler/RestExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/controller/v1/api/FormulaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/controller/v1/api/FormulaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/controller/v1/api/ItemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/controller/v1/api/ItemController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/controller/v1/api/LimitationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/controller/v1/api/LimitationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/controller/v1/api/ReportController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/controller/v1/api/ReportController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/controller/v1/api/ResultController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/controller/v1/api/ResultController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/controller/v1/api/StageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/controller/v1/api/StageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/controller/v1/api/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/controller/v1/api/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/controller/v1/api/ZoneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/controller/v1/api/ZoneController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/controller/v2/api/EventPeriodController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/controller/v2/api/EventPeriodController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/controller/v2/api/FormulaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/controller/v2/api/FormulaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/controller/v2/api/NoticeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/controller/v2/api/NoticeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/controller/v2/api/OutlierController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/controller/v2/api/OutlierController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/controller/v2/api/PrivateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/controller/v2/api/PrivateController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/controller/v2/api/ReportController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/controller/v2/api/ReportController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/controller/v2/api/ResultController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/controller/v2/api/ResultController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/controller/v2/api/ShortURLController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/controller/v2/api/ShortURLController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/controller/v2/api/SiteStatsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/controller/v2/api/SiteStatsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/controller/v2/api/StageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/controller/v2/api/StageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/controller/v2/api/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/controller/v2/api/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/controller/v2/api/ZoneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/controller/v2/api/ZoneController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/controller/v2/mapper/QueryMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/controller/v2/mapper/QueryMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/controller/v2/request/AdvancedQueryRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/controller/v2/request/AdvancedQueryRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/controller/v2/request/RecallLastReportRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/controller/v2/request/RecallLastReportRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/controller/v2/request/SingleQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/controller/v2/request/SingleQuery.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/controller/v2/request/SingleRecognitionDrop.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/controller/v2/request/SingleRecognitionDrop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/controller/v2/request/SingleReportRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/controller/v2/request/SingleReportRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/controller/v2/response/AdvancedQueryResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/controller/v2/response/AdvancedQueryResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/controller/v2/response/ItemQuantity.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/controller/v2/response/ItemQuantity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/controller/v2/response/MatrixQueryResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/controller/v2/response/MatrixQueryResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/controller/v2/response/PatternQueryResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/controller/v2/response/PatternQueryResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/controller/v2/response/SingleReportResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/controller/v2/response/SingleReportResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/controller/v2/response/SiteStatsResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/controller/v2/response/SiteStatsResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/controller/v2/response/StageTimes.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/controller/v2/response/StageTimes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/controller/v2/response/StageTrend.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/controller/v2/response/StageTrend.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/controller/v2/response/TrendDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/controller/v2/response/TrendDetail.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/controller/v2/response/TrendQueryResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/controller/v2/response/TrendQueryResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/dao/DropInfoDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/dao/DropInfoDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/dao/DropMatrixElementDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/dao/DropMatrixElementDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/dao/ItemDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/dao/ItemDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/dao/ItemDropDaoCustom.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/dao/ItemDropDaoCustom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/dao/ItemDropDaoCustomImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/dao/ItemDropDaoCustomImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/dao/PatternMatrixElementDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/dao/PatternMatrixElementDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/dao/StageDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/dao/StageDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/dao/SystemPropertyDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/dao/SystemPropertyDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/dao/TimeRangeDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/dao/TimeRangeDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/dao/ZoneDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/dao/ZoneDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/enums/DropMatrixElementType.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/enums/DropMatrixElementType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/enums/DropType.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/enums/DropType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/enums/QueryType.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/enums/QueryType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/enums/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/enums/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/enums/ValidatorType.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/enums/ValidatorType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/filter/CompatibleVersionFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/filter/CompatibleVersionFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/model/Bounds.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/model/Bounds.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/model/Drop.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/model/Drop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/model/DropInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/model/DropInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/model/DropMatrixElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/model/DropMatrixElement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/model/DropPattern.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/model/DropPattern.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/model/EventPeriod.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/model/EventPeriod.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/model/ExistConditions.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/model/ExistConditions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/model/GeoIP.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/model/GeoIP.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/model/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/model/Item.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/model/ItemQuantityBounds.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/model/ItemQuantityBounds.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/model/Notice.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/model/Notice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/model/PatternMatrixElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/model/PatternMatrixElement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/model/QueryConditions.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/model/QueryConditions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/model/SystemProperty.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/model/SystemProperty.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/model/TypedDrop.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/model/TypedDrop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/model/query/BasicQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/model/query/BasicQuery.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/model/query/GlobalMatrixQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/model/query/GlobalMatrixQuery.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/model/query/GlobalPatternQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/model/query/GlobalPatternQuery.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/model/query/GlobalTrendQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/model/query/GlobalTrendQuery.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/model/query/MatrixQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/model/query/MatrixQuery.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/model/query/QueryFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/model/query/QueryFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/model/query/TrendQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/model/query/TrendQuery.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/service/DropInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/service/DropInfoServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/service/DropMatrixElementService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/service/DropMatrixElementService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/service/DropMatrixElementServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/service/DropMatrixElementServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/service/EventPeriodServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/service/EventPeriodServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/service/GeoIPLocationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/service/GeoIPLocationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/service/GeoIPLocationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/service/GeoIPLocationServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/service/NoticeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/service/NoticeServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/service/PatternMatrixElementServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/service/PatternMatrixElementServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/service/StageServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/service/StageServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/service/SystemPropertyServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/service/SystemPropertyServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/service/TimeRangeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/service/TimeRangeServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/service/ZoneServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/service/ZoneServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/task/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/task/Task.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/util/AESUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/util/AESUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/util/CookieUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/util/CookieUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/util/DateUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/util/DateUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/util/DropMatrixElementUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/util/DropMatrixElementUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/util/IpUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/util/IpUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/util/LastUpdateTimeUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/util/LastUpdateTimeUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/util/RSAUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/util/RSAUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/util/ResultUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/util/ResultUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/util/TimeRangeUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/util/TimeRangeUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/util/UpYunUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/util/UpYunUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/util/exception/NotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/util/exception/NotFoundException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/util/strategy/ScreenshotReportDecryptStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/util/strategy/ScreenshotReportDecryptStrategy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/util/validator/BaseValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/util/validator/BaseValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/util/validator/DropsValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/util/validator/DropsValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/util/validator/Validator.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/java/io/penguinstats/util/validator/Validator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/resources/json/formula.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/main/resources/json/formula.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/test/java/io/penguinstats/config/TestConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/test/java/io/penguinstats/config/TestConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/test/java/io/penguinstats/controller/TestReportController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/test/java/io/penguinstats/controller/TestReportController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-dev/backend-dev/src/test/resources/application-test.yml" beforeDir="false" afterPath="$PROJECT_DIR$/backend-dev/backend-dev/src/test/resources/application-test.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce-order-service-master/ecommerce-order-service-master/ecommerce-order-service-api/gradle/docker-compose/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-order-service-master/ecommerce-order-service-master/ecommerce-order-service-api/gradle/docker-compose/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce-order-service-master/ecommerce-order-service-master/ecommerce-order-service-api/src/main/resources/db/migration/V1.0__order.sql" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-order-service-master/ecommerce-order-service-master/ecommerce-order-service-api/src/main/resources/db/migration/V1.0__order.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce-order-service-master/ecommerce-order-service-master/ecommerce-order-service-api/src/main/resources/db/migration/V1.1__order_summary.sql" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-order-service-master/ecommerce-order-service-master/ecommerce-order-service-api/src/main/resources/db/migration/V1.1__order_summary.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce-order-service-master/ecommerce-order-service-master/gradle/dependency-check/dependency-check.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-order-service-master/ecommerce-order-service-master/gradle/dependency-check/dependency-check.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce-order-service-master/ecommerce-order-service-master/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce-order-service-master/ecommerce-order-service-master/settings.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hello-spring/hello-spring/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/hello-spring/hello-spring/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hello-spring/hello-spring/src/main/java/hello/hellospring/HelloSpringApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/hello-spring/hello-spring/src/main/java/hello/hellospring/HelloSpringApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hello-spring/hello-spring/src/test/java/hello/hellospring/HelloSpringApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/hello-spring/hello-spring/src/test/java/hello/hellospring/HelloSpringApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/md파일/JAVA 입출력.md" beforeDir="false" afterPath="$PROJECT_DIR$/md파일/JAVA 입출력.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/md파일/객체 지향이란.md" beforeDir="false" afterPath="$PROJECT_DIR$/md파일/객체 지향이란.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/md파일/파스칼, 캐멀, 헝가리언, 스네이크 표기법.md" beforeDir="false" afterPath="$PROJECT_DIR$/md파일/파스칼, 캐멀, 헝가리언, 스네이크 표기법.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/md파일/프론트, api.md" beforeDir="false" afterPath="$PROJECT_DIR$/md파일/프론트, api.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/muti_network/muti_network/MultiClientThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/muti_network/muti_network/MultiClientThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/muti_network/muti_network/MultiServerThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/muti_network/muti_network/MultiServerThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/muti_network/muti_network/muti_network/MultiClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/muti_network/muti_network/muti_network/MultiClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vanilla js/1.1.js" beforeDir="false" afterPath="$PROJECT_DIR$/vanilla js/1.1.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vanilla js/1.2.js" beforeDir="false" afterPath="$PROJECT_DIR$/vanilla js/1.2.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vanilla js/1.3.js" beforeDir="false" afterPath="$PROJECT_DIR$/vanilla js/1.3.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vanilla js/1.4.js" beforeDir="false" afterPath="$PROJECT_DIR$/vanilla js/1.4.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vanilla js/1.5.js" beforeDir="false" afterPath="$PROJECT_DIR$/vanilla js/1.5.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vanilla js/2.0.js" beforeDir="false" afterPath="$PROJECT_DIR$/vanilla js/2.0.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vanilla js/2.1.js" beforeDir="false" afterPath="$PROJECT_DIR$/vanilla js/2.1.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vanilla js/2.3.js" beforeDir="false" afterPath="$PROJECT_DIR$/vanilla js/2.3.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vanilla js/2.4.js" beforeDir="false" afterPath="$PROJECT_DIR$/vanilla js/2.4.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vanilla js/2.5.js" beforeDir="false" afterPath="$PROJECT_DIR$/vanilla js/2.5.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vanilla js/2.6.js" beforeDir="false" afterPath="$PROJECT_DIR$/vanilla js/2.6.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vanilla js/3.0.js" beforeDir="false" afterPath="$PROJECT_DIR$/vanilla js/3.0.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vanilla js/3.1.js" beforeDir="false" afterPath="$PROJECT_DIR$/vanilla js/3.1.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vanilla js/3.3.js" beforeDir="false" afterPath="$PROJECT_DIR$/vanilla js/3.3.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vanilla js/3.4.js" beforeDir="false" afterPath="$PROJECT_DIR$/vanilla js/3.4.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vanilla js/3.5.js" beforeDir="false" afterPath="$PROJECT_DIR$/vanilla js/3.5.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vanilla js/3.7.js" beforeDir="false" afterPath="$PROJECT_DIR$/vanilla js/3.7.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vanilla js/3.8.js" beforeDir="false" afterPath="$PROJECT_DIR$/vanilla js/3.8.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vanilla js/3.9.1.js" beforeDir="false" afterPath="$PROJECT_DIR$/vanilla js/3.9.1.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vanilla js/3.9.2.js" beforeDir="false" afterPath="$PROJECT_DIR$/vanilla js/3.9.2.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vanilla js/3.9.3.js" beforeDir="false" afterPath="$PROJECT_DIR$/vanilla js/3.9.3.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vanilla js/3.9.4.js" beforeDir="false" afterPath="$PROJECT_DIR$/vanilla js/3.9.4.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vanilla js/3.9.js" beforeDir="false" afterPath="$PROJECT_DIR$/vanilla js/3.9.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vanilla js/4.0.js" beforeDir="false" afterPath="$PROJECT_DIR$/vanilla js/4.0.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vanilla js/4.1.js" beforeDir="false" afterPath="$PROJECT_DIR$/vanilla js/4.1.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vanilla js/4.2.js" beforeDir="false" afterPath="$PROJECT_DIR$/vanilla js/4.2.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vanilla js/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vanilla js/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/소켓통신예제파일/ListeningThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/소켓통신예제파일/ListeningThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/소켓통신예제파일/MySocketServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/소켓통신예제파일/MySocketServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/소켓통신예제파일/WritingThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/소켓통신예제파일/WritingThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/소켓통신예제파일/socket/MySocketClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/소켓통신예제파일/socket/MySocketClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/TIL.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python chatting server, client/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/python chatting server, client/server.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -201,15 +43,19 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="ExpandSpringBootJavaOptionsPanel" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
   </component>
   <component name="RunManager">
     <configuration name="SpringstudyApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="springstudy.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.springstudy.SpringstudyApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SHORTEN_COMMAND_LINE" value="NONE" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -224,10 +70,22 @@
       <option name="presentableId" value="Default" />
       <updated>1622022232447</updated>
       <workItem from="1622022236891" duration="363000" />
+      <workItem from="1622801910762" duration="1683000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
