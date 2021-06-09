@@ -29,7 +29,7 @@ public class CompatibleVersionFilter implements Filter {
     }
 
     @Override
-    public void destroy() {
+    public void destroy(){
     }
 
 }
