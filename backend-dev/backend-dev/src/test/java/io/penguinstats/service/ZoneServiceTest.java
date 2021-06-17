@@ -27,7 +27,7 @@ public class ZoneServiceTest {
     @Autowired
     private ZoneService zoneService;
 
-    private List<Zone> newZones = new ArrayList<>();
+    private final List<Zone> newZones = new ArrayList<>();
 
     @Before
     public void setUp() {
