@@ -18,7 +18,7 @@ class OrderTest {
 
     @Test
     public void should_create_order() {
-        Address address = Address.of("四川", "成都", "天府软件园1号");
+        Address address = Address.of("쓰촨성", "성도", "톈푸소프트웨어원 1호\n");
 
         OrderItem orderItem1 = create(newUuid(), 2, valueOf(20));
         OrderItem orderItem2 = create(newUuid(), 3, valueOf(30));

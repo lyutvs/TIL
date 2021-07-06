@@ -21,6 +21,7 @@ public class HelloController {
         return "hello-template";
     }
 
+
     @GetMapping("hello-string")
     @ResponseBody
     public String helloString(@RequestParam("name") String name) {

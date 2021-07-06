@@ -54,6 +54,7 @@ def delete(answer_id):
     if g.user != answer.user:
         flash('삭제권한이 없습니다')
     else:
+    
         db.session.delete(answer)
         db.session.commit()
     return redirect(url_for('question.detail', question_id=question_id))
